@@ -23,3 +23,6 @@ Agent: cx
 
 ## Decisions
 - Used an inline script in `<head>` for first-paint theme selection to reduce visible flash before React hydration.
+- Chose a simple two-state persisted preference (`light`/`dark`) rather than introducing a third explicit `system` mode because the spec only required localStorage persistence plus OS fallback.
+- Kept changes scoped to `src/app/layout.tsx` and `src/components/theme-toggle.tsx` per spec out-of-scope constraints; existing page/card components were intentionally left unchanged.
+- Resolved potential mismatch between first paint and hydrated UI by applying the same storage key and fallback logic in both the head bootstrap script and the client toggle initialization.
