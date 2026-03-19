@@ -130,15 +130,20 @@ fi
 
 ## Step 4: Test your changes
 
+The **dev server** runs a local development server of this project's source code (e.g. Next.js, Vite, etc.) so you can verify your changes work correctly — either by running automated tests against it or by providing the user a URL for manual review.
+
+**IMPORTANT:** `aigon dev-server start` starts the **project's** dev server (e.g. `npm run dev`) with managed port allocation. It is NOT `aigon dashboard` — the dashboard is Aigon's centralised management UI across all repositories and has nothing to do with previewing project changes. Never run `aigon dashboard` to test your work.
+
 ### Drive Mode (branch)
-- Start the dev server if needed
+- Start the dev server: `aigon dev-server start` (NEVER run `npm run dev` or `next dev` directly — it bypasses port allocation and causes port conflicts)
+- Use the URL printed by the command to access the app
 - Run the full test suite and verify all tests pass
 - Ask the user to verify
 
 ### Worktree Mode (Drive worktree or Fleet)
-- **NEVER run `npm run dev` or `next dev` directly** — this bypasses port allocation and will bind to port 3000 (the main app)
+- **NEVER run `npm run dev` or `next dev` directly** — this bypasses port allocation and will cause port conflicts
 - Run `aigon dev-server start` — allocates your agent's unique port, starts the server, registers with the proxy, and waits for healthy
-- Use the URL printed by the command (e.g. `http://cx-121.myapp.test`) — never use `http://localhost:3000`
+- Use the URL printed by the command (e.g. `http://cx-121.myapp.test`) — always use the allocated URL
 - Use `aigon dev-server logs` to check startup output if anything seems wrong
 - Ask the user to verify
 

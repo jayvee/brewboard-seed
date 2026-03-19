@@ -1,6 +1,3 @@
----
-description: Manage dev server - start, stop, logs, list (shortcut for dev-server)
----
 # aigon-dev-server
 
 Manage the dev server for the current project. Handles port allocation, process lifecycle, proxy registration, and log viewing.

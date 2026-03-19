@@ -1,12 +1,8 @@
----
-description: Do feature <ID> - works in both Drive and Fleet modes (shortcut for feature-do)
-argument-hint: "<ID> [--agent=<cc|gg|cx|cu>] [--autonomous] [--max-iterations=N] [--auto-submit] [--no-auto-submit] [--dry-run]"
----
 # aigon-feature-do
 
 Implement a feature. Works in Drive mode (branch), Drive mode (worktree) (parallel development), and Fleet mode (competition).
 
-**IMPORTANT:** Run `/aigon:feature-setup <ID>` first to prepare your workspace.
+**IMPORTANT:** Run `/aigon-feature-setup <ID>` first to prepare your workspace.
 
 ## Argument Resolution
 
@@ -20,13 +16,13 @@ If no ID is provided, or the ID doesn't match an existing feature in progress:
 This command detects whether you're in Drive or Fleet mode and provides guidance.
 
 ```bash
-aigon feature-do {{args}}
+aigon feature-do <name>
 ```
 
 To run in **Autopilot mode** — autonomous retry loop where a fresh agent session is spawned each iteration until validation passes:
 
 ```bash
-aigon feature-do {{args}} --autonomous
+aigon feature-do <name> --autonomous
 ```
 
 Optional flags: `--max-iterations=N` (default 5) · `--agent=<id>` · `--dry-run`
@@ -44,11 +40,11 @@ The command will:
 git checkout main -- docs/specs/features/03-in-progress/
 git commit -m "chore: sync spec to worktree branch"
 ```
-Then re-run `/aigon:feature-do {{args}}`.
+Then re-run `/aigon-feature-do <name>`.
 
 ## Step 2: Read the spec
 
-Read the spec in `./docs/specs/features/03-in-progress/feature-{{args}}-*.md`
+Read the spec in `./docs/specs/features/03-in-progress/feature-<name>-*.md`
 
 ## Step 2.5: Consider Plan Mode
 
@@ -86,10 +82,6 @@ aigon agent-status implementing
 Before writing code, create a task for each **Acceptance Criterion** from the spec. This gives the user visibility into implementation progress via the task list.
 
 Then implement the feature according to the spec. Mark tasks as in-progress when you start working on them, and completed when satisfied. If you discover sub-tasks during implementation, add them to the list.
-
-### Agent Teams (optional)
-
-For features with multiple independent acceptance criteria spanning different areas (e.g., frontend, backend, tests), consider creating an agent team. Assign each teammate a distinct slice of the implementation with clear file ownership boundaries to avoid conflicts. Use delegate mode and require plan approval before teammates begin implementing. Reference: https://code.claude.com/docs/en/agent-teams
 
 
 **For worktree modes (Drive worktree or Fleet):** Use relative paths throughout implementation. Maintain the worktree directory as your working directory.
@@ -174,7 +166,7 @@ pwd
 
 Expected output:
 - Drive mode (branch): Main repository path
-- Worktree mode: `.../feature-{{args}}-<agent>-<description>`
+- Worktree mode: `.../feature-<name>-<agent>-<description>`
 
 **Now commit your changes:**
 1. Stage and commit your code changes using conventional commits (`feat:`, `fix:`, `chore:`)
@@ -183,8 +175,8 @@ Expected output:
 ## Step 6: Update and commit the log
 
 Find your implementation log:
-- Drive mode (branch): `./docs/specs/features/logs/feature-{{args}}-*-log.md`
-- Worktree mode: `./docs/specs/features/logs/feature-{{args}}-<agent>-*-log.md`
+- Drive mode (branch): `./docs/specs/features/logs/feature-<name>-*-log.md`
+- Worktree mode: `./docs/specs/features/logs/feature-<name>-<agent>-*-log.md`
 
 Update it with:
 - Key decisions made during implementation
