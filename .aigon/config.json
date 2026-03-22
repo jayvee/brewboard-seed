@@ -1,14 +1,9 @@
 {
   "agents": {
-    "cc": {
-      "models": {}
-    },
-    "gg": {
-      "models": {}
-    },
-    "cx": {
-      "models": {}
-    }
+    "cc": { "models": {} },
+    "gg": { "models": {} },
+    "cx": { "models": {} },
+    "cu": { "models": {} }
   },
   "devProxy": {
     "basePort": 4200
