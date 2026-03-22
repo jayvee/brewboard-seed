@@ -27,6 +27,18 @@
           }
         ]
       }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/jviner/.local/state/fnm_multishells/57953_1773965406788/bin/aigon capture-session-telemetry",
+            "timeout": 30
+          }
+        ]
+      }
     ]
   }
 }

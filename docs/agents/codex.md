@@ -13,11 +13,11 @@
 |---------|-------------|
 | `/prompts:aigon-feature-create <name>` | Create a new feature spec |
 | `/prompts:aigon-feature-prioritise <name>` | Assign ID and move to backlog |
-| `/prompts:aigon-feature-setup <ID> [agents...]` | Setup for Drive (branch) or Fleet (worktrees) |
+| `/prompts:aigon-feature-start <ID> [agents...]` | Setup for Drive (branch) or Fleet (worktrees) |
 | `/prompts:aigon-feature-do <ID> [--autonomous]` | Implement feature; `--autonomous` runs iterative retry loop |
 | `/prompts:aigon-feature-eval <ID>` | Create evaluation (code review or comparison) |
 | `/prompts:aigon-feature-review <ID>` | Code review with fixes by a different agent |
-| `/prompts:aigon-feature-submit` | (agent-only) Commit changes, write log, signal implementation complete |
+| `/prompts:aigon-feature-submit` | (you must run this) Commit changes, write log, signal implementation complete |
 | `/prompts:aigon-feature-close <ID> [agent]` | Merge and complete feature |
 | `/prompts:aigon-feature-autopilot <ID> [agents...]` | Fleet autopilot: setup + spawn + monitor + eval |
 | `/prompts:aigon-feature-cleanup <ID>` | Clean up Fleet worktrees and branches |
@@ -27,10 +27,10 @@
 |---------|-------------|
 | `/prompts:aigon-research-create <name>` | Create a new research topic |
 | `/prompts:aigon-research-prioritise <name>` | Prioritise a research topic |
-| `/prompts:aigon-research-setup <ID> [agents...]` | Setup for Drive or Fleet research |
+| `/prompts:aigon-research-start <ID> [agents...]` | Setup for Drive or Fleet research |
 | `/prompts:aigon-research-open <ID>` | Open all Fleet agents side-by-side for parallel research |
 | `/prompts:aigon-research-do <ID>` | Conduct research (write findings) |
-| `/prompts:aigon-research-submit` | (agent-only) Signal research findings are complete |
+| `/prompts:aigon-research-submit` | (you must run this) Signal research findings are complete |
 | `/prompts:aigon-research-close <ID>` | Complete research topic |
 
 ### Feedback Commands
@@ -48,8 +48,17 @@
 
 ## Modes
 
-- **Drive mode**: `/prompts:aigon-feature-setup <ID>` - Creates branch only, work in current directory
-- **Fleet mode**: `/prompts:aigon-feature-setup <ID> <agents...>` - Creates worktrees for parallel implementation
+- **Drive mode**: `/prompts:aigon-feature-start <ID>` - Creates branch only, work in current directory
+- **Fleet mode**: `/prompts:aigon-feature-start <ID> <agents...>` - Creates worktrees for parallel implementation
+
+## Mandatory Lifecycle Commands
+
+A feature is NOT complete until you run these commands yourself:
+
+1. `aigon agent-status implementing` — when you start coding
+2. `aigon agent-status submitted` — after committing all code and log updates
+
+These are CLI commands you run directly — not slash commands, not auto-invoked. The `aigon agent-status` command writes state to the **main repo** (not the worktree), so you won't see state files locally. Just run the command and trust the output.
 
 ## Critical Rules
 
@@ -62,7 +71,7 @@
 
 ## Drive Mode Workflow
 
-1. Run `/prompts:aigon-feature-setup <ID>` to create branch and move spec
+1. Run `/prompts:aigon-feature-start <ID>` to create branch and move spec
 2. Run `/prompts:aigon-feature-do <ID>` to begin implementation
 3. Read the spec in `./docs/specs/features/03-in-progress/feature-<ID>-*.md`
 4. Implement the feature according to the spec
@@ -73,7 +82,7 @@
 
 ## Fleet Mode Workflow
 
-1. Run `/prompts:aigon-feature-setup <ID> cc cx gg cu` to create worktrees for each agent
+1. Run `/prompts:aigon-feature-start <ID> cc cx gg cu` to create worktrees for each agent
 2. **STOP** - Tell the user to open the worktree in a separate session
 3. In the worktree session:
    - Run `/prompts:aigon-feature-do <ID>`

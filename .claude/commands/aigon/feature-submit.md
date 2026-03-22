@@ -29,6 +29,10 @@ If a dev server is running in this session, stop it now:
 aigon dev-server stop 2>/dev/null || true
 ```
 
+## Check documentation is up to date
+
+Before committing, verify that if your changes added modules, changed repo structure, introduced new patterns, or affected cross-repo workflows, you've updated `CLAUDE.md`, `docs/architecture.md`, and/or `AGENTS.md`. Documentation ships with the code.
+
 ## Commit implementation changes
 
 **Before committing, verify your working directory:**
