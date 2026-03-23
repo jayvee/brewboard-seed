@@ -71,7 +71,7 @@ For complex research topics with multiple questions, consider creating an agent 
 
 2. **Signal completion** so the dashboard knows you're done:
    ```bash
-   aigon research-submit {{args}}
+   aigon agent-status submitted
    ```
 
 3. **STAY in the session.** The user may want to review your findings and ask follow-up questions. Do NOT run `aigon research-close` — the user will evaluate all agents' findings.
