@@ -21,6 +21,7 @@ export default function Home() {
           <BeerCard key={beer.id} {...beer} />
         ))}
       </div>
+      <footer className="mt-8 text-sm text-stone-400 text-center py-4">Built with BrewBoard</footer>
     </main>
   );
 }
