@@ -2,12 +2,11 @@
 
 ## Summary
 
-The header text "BrewBoard" is currently `text-stone-900`. Research whether a different colour (amber, orange, or brown) would better match the craft beer theme.
+The header text "BrewBoard" in `src/app/page.tsx` uses `text-stone-900`. Should it be `text-amber-700` instead? Answer yes or no with a one-paragraph justification. Do NOT do external research, web searches, or spawn sub-agents. Just read the code and give your opinion.
 
 ## Questions
 
-- [ ] Which Tailwind colour class best suits a craft beer app header? (amber-600, orange-700, stone-800, or keep stone-900)
-- [ ] Should the header colour change in dark mode?
+- [ ] Should the header use `text-amber-700` instead of `text-stone-900`? (yes/no, one paragraph)
 
 ## Findings
 
