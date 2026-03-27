@@ -1,3 +1,8 @@
+---
+depends_on:
+  - beer-data-model
+---
+
 # Feature: Rating System
 
 ## Summary
