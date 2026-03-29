@@ -15,6 +15,31 @@ If no ID is provided, or the ID doesn't match an existing feature in progress:
 2. If a partial ID or name was given, filter to matches
 3. Present the matching features and ask the user to choose one
 
+## Step 0: Verify your workspace (MANDATORY)
+
+Before doing ANYTHING else, verify you are on the correct branch — **never implement on `main`**.
+
+```bash
+git branch --show-current
+```
+
+**Expected**: A branch named `feature-<ID>-<agent>-<description>` (e.g., `feature-55-gg-add-auth`).
+
+**If the output is `main` or `master`:** STOP. You are on the wrong branch. Do NOT write any code. Instead:
+1. Check if a feature branch already exists: `git branch | grep feature-{{args}}`
+2. If it exists, switch to it: `git checkout feature-{{args}}-cc-*` (use the full branch name from the list)
+3. If it does NOT exist, the workspace was not set up — run `/aigon:feature-start {{args}}` first
+
+Also verify your working directory:
+```bash
+pwd
+```
+
+**Expected for worktree mode**: A path ending in `feature-{{args}}-cc-<description>`
+**Expected for Drive mode**: The main repository path (but on a feature branch, NOT main)
+
+**Do not proceed past this step until you have confirmed you are on a feature branch.**
+
 ## Step 1: Run the CLI command
 
 This command detects whether you're in Drive or Fleet mode and provides guidance.
