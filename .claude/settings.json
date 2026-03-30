@@ -49,6 +49,18 @@
           }
         ]
       }
+    ],
+    "Stop": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/jviner/.local/state/fnm_multishells/39746_1774779694101/bin/aigon check-agent-submitted",
+            "timeout": 5
+          }
+        ]
+      }
     ]
   }
 }
