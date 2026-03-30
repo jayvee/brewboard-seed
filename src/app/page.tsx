@@ -1,4 +1,4 @@
-import { BeerCard } from '@/components/BeerCard';
+import { SearchableBeerList } from '@/components/SearchableBeerList';
 
 const BEERS = [
   { id: 1, name: 'Hazy IPA', brewery: 'Mountain Goat', style: 'IPA', rating: 4.5 },
@@ -16,11 +16,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold text-stone-900">BrewBoard</h1>
         <p className="text-stone-500 mt-2">Your craft beer collection</p>
       </header>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {BEERS.map(beer => (
-          <BeerCard key={beer.id} {...beer} />
-        ))}
-      </div>
+      <SearchableBeerList beers={BEERS} />
     </main>
   );
 }
