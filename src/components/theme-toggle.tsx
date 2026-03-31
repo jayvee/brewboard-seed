@@ -3,7 +3,9 @@
 import { useEffect, useState } from 'react';
 
 export default function ThemeToggle() {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(
+    () => typeof document !== 'undefined' && document.documentElement.classList.contains('dark'),
+  );
 
   useEffect(() => {
     const stored = localStorage.getItem('brewboard-theme');
