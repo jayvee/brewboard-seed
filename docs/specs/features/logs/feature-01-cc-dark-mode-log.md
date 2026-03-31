@@ -17,3 +17,22 @@ Agent: cc
 - ThemeToggle uses `useEffect` on mount to sync its state with whatever the inline script applied.
 - Added `dark:` Tailwind variants to `<body>` so dark mode has visible effect out of the box.
 - The toggle manipulates `document.documentElement.classList` directly (rather than re-rendering) for instant response.
+
+## Code Review
+
+**Reviewed by**: cu  
+**Date**: 2026-04-01
+
+### Findings
+
+- Inline script adds `dark` to `<html>` before hydration while the server renders `<html>` without that class; React would warn or mis-hydrate without `suppressHydrationWarning` on `<html>`.
+- `useState(false)` caused a one-frame wrong toggle icon after the blocking script had already applied dark mode; initial state now reads `document.documentElement.classList` on the client.
+
+### Fixes Applied
+
+- `fix(review): suppress html hydration warning and align ThemeToggle initial state with document class`
+- `docs(review): add review notes to implementation log`
+
+### Notes
+
+- Implementation matches spec: `brewboard-theme` localStorage, OS preference when unset, `ThemeToggle` + layout integration.
