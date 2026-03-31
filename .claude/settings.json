@@ -1,7 +1,14 @@
 {
   "permissions": {
     "allow": [
-      "Bash(aigon:*)"
+      "Bash(aigon:*)",
+      "Read(/Users/jviner/src/brewboard-worktrees/feature-01-cc-dark-mode/**)",
+      "Edit(/Users/jviner/src/brewboard-worktrees/feature-01-cc-dark-mode/**)",
+      "Write(/Users/jviner/src/brewboard-worktrees/feature-01-cc-dark-mode/**)",
+      "Bash(cd /Users/jviner/src/brewboard-worktrees/feature-01-cc-dark-mode:*)",
+      "Bash(git -C /Users/jviner/src/brewboard-worktrees/feature-01-cc-dark-mode:*)",
+      "Bash(node:*)",
+      "Bash(npm:*)"
     ],
     "deny": [
       "Bash(rm -rf /)",

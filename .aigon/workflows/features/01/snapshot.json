@@ -1,0 +1,95 @@
+{
+  "featureId": "01",
+  "lifecycle": "implementing",
+  "mode": "solo_worktree",
+  "winnerAgentId": null,
+  "agents": {
+    "cc": {
+      "id": "cc",
+      "status": "ready",
+      "lastHeartbeatAt": "2026-03-31T23:28:07.970Z",
+      "restartCount": 0
+    }
+  },
+  "currentSpecState": "implementing",
+  "specPath": "/Users/jviner/src/brewboard/docs/specs/features/03-in-progress/feature-01-dark-mode.md",
+  "effects": [
+    {
+      "id": "start.move_spec",
+      "type": "move_spec",
+      "payload": {
+        "fromPath": "/Users/jviner/src/brewboard/docs/specs/features/02-backlog/feature-01-dark-mode.md",
+        "toPath": "/Users/jviner/src/brewboard/docs/specs/features/03-in-progress/feature-01-dark-mode.md"
+      },
+      "status": "succeeded",
+      "claimedAt": null,
+      "claimExpiredAt": null,
+      "reclaimCount": 0,
+      "lastError": null
+    },
+    {
+      "id": "start.init_log_cc",
+      "type": "init_log",
+      "payload": {
+        "agentId": "cc",
+        "num": "01",
+        "desc": "dark-mode"
+      },
+      "status": "succeeded",
+      "claimedAt": null,
+      "claimExpiredAt": null,
+      "reclaimCount": 0,
+      "lastError": null
+    }
+  ],
+  "lastEffectError": null,
+  "availableActions": [
+    {
+      "kind": "feature-autopilot",
+      "label": "Run Autopilot",
+      "eventType": null,
+      "recommendedOrder": 2,
+      "category": "lifecycle",
+      "requiresInput": "agentPicker",
+      "scope": null,
+      "metadata": null,
+      "clientOnly": false
+    },
+    {
+      "kind": "pause-feature",
+      "label": "Pause feature",
+      "eventType": "feature.pause",
+      "recommendedOrder": 40,
+      "category": "lifecycle",
+      "requiresInput": null,
+      "scope": null,
+      "metadata": null,
+      "clientOnly": false
+    },
+    {
+      "kind": "feature-review",
+      "label": "Review",
+      "eventType": "feature.review",
+      "recommendedOrder": 55,
+      "category": "lifecycle",
+      "requiresInput": null,
+      "scope": null,
+      "metadata": null,
+      "clientOnly": false
+    },
+    {
+      "kind": "feature-close",
+      "label": "Close feature",
+      "eventType": "feature.close",
+      "recommendedOrder": 70,
+      "category": "lifecycle",
+      "requiresInput": null,
+      "scope": null,
+      "metadata": null,
+      "clientOnly": false
+    }
+  ],
+  "eventCount": 10,
+  "createdAt": "2026-03-31T23:26:41.771Z",
+  "updatedAt": "2026-03-31T23:28:07.970Z"
+}

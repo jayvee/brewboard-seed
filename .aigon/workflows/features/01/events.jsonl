@@ -1,0 +1,10 @@
+{"type":"feature.started","featureId":"01","mode":"solo_worktree","agents":["cc"],"at":"2026-03-31T23:26:41.771Z"}
+{"type":"effect.requested","effect":{"id":"start.move_spec","type":"move_spec","payload":{"fromPath":"/Users/jviner/src/brewboard/docs/specs/features/02-backlog/feature-01-dark-mode.md","toPath":"/Users/jviner/src/brewboard/docs/specs/features/03-in-progress/feature-01-dark-mode.md"}},"at":"2026-03-31T23:26:41.777Z"}
+{"type":"effect.requested","effect":{"id":"start.init_log_cc","type":"init_log","payload":{"agentId":"cc","num":"01","desc":"dark-mode"}},"at":"2026-03-31T23:26:41.777Z"}
+{"type":"effect.claimed","effectId":"start.move_spec","at":"2026-03-31T23:26:41.780Z"}
+{"type":"effect.succeeded","effectId":"start.move_spec","at":"2026-03-31T23:26:41.783Z"}
+{"type":"effect.claimed","effectId":"start.init_log_cc","at":"2026-03-31T23:26:41.784Z"}
+{"type":"effect.succeeded","effectId":"start.init_log_cc","at":"2026-03-31T23:26:41.785Z"}
+{"type":"signal.heartbeat","agentId":"cc","at":"2026-03-31T23:26:43.562Z"}
+{"type":"signal.heartbeat","agentId":"cc","at":"2026-03-31T23:26:58.275Z"}
+{"type":"signal.agent_ready","agentId":"cc","at":"2026-03-31T23:28:07.970Z"}
