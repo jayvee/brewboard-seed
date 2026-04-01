@@ -5,4 +5,6 @@ Agent: cu
 
 ## Progress
 
+Implemented StarRating with half-star rounding.
+
 ## Decisions
