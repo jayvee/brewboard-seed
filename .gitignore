@@ -7,3 +7,6 @@ node_modules/
 .aigon/locks/
 next-env.d.ts
 .env.local
+
+# clerk configuration (can include secrets)
+/.clerk/
