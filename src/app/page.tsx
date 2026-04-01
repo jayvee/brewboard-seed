@@ -1,4 +1,5 @@
 import { BeerCard } from '@/components/BeerCard';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 const BEERS = [
   { id: 1, name: 'Hazy IPA', brewery: 'Mountain Goat', style: 'IPA', rating: 4.5 },
@@ -12,9 +13,12 @@ const BEERS = [
 export default function Home() {
   return (
     <main className="max-w-4xl mx-auto p-8">
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold text-stone-900">BrewBoard</h1>
-        <p className="text-stone-500 mt-2">Your craft beer collection</p>
+      <header className="mb-8 flex justify-between items-center">
+        <div>
+          <h1 className="text-4xl font-bold text-stone-900 dark:text-stone-100">BrewBoard</h1>
+          <p className="text-stone-500 mt-2 dark:text-stone-400">Your craft beer collection</p>
+        </div>
+        <ThemeToggle />
       </header>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {BEERS.map(beer => (
