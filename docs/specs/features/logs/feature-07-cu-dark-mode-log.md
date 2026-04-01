@@ -5,4 +5,6 @@ Agent: cu
 
 ## Progress
 
+Implemented dark mode theme toggle and persistence.
+
 ## Decisions
