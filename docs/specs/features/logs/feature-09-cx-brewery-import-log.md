@@ -4,5 +4,6 @@ Agent: cx
 ## Plan
 
 ## Progress
+Implemented brewery CSV parser.
 
 ## Decisions
