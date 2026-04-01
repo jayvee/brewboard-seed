@@ -1,1 +1,8 @@
 {"type":"research.bootstrapped","researchId":"02","stage":"backlog","lifecycle":"backlog","at":"2026-04-01T23:01:29.836Z"}
+{"type":"research.started","researchId":"02","mode":"fleet","agents":["cc","cu"],"at":"2026-04-01T23:05:12.695Z"}
+{"type":"signal.heartbeat","agentId":"cu","at":"2026-04-01T23:05:12.971Z"}
+{"type":"signal.heartbeat","agentId":"cc","at":"2026-04-01T23:05:24.575Z"}
+{"type":"signal.heartbeat","agentId":"cu","at":"2026-04-01T23:06:56.521Z"}
+{"type":"signal.agent_ready","agentId":"cu","at":"2026-04-01T23:08:18.504Z"}
+{"type":"signal.agent_ready","agentId":"cc","at":"2026-04-01T23:09:19.881Z"}
+{"type":"signal.heartbeat","agentId":"cc","at":"2026-04-01T23:13:22.687Z"}

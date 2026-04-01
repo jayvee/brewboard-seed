@@ -22,3 +22,12 @@
 {"type":"effect.claimed","effectId":"eval.write_eval_stub","at":"2026-04-01T23:01:26.125Z"}
 {"type":"effect.succeeded","effectId":"eval.write_eval_stub","at":"2026-04-01T23:01:26.126Z"}
 {"type":"signal.heartbeat","agentId":"cc","at":"2026-04-01T23:01:26.935Z"}
+{"type":"winner.selected","agentId":"cu","at":"2026-04-01T23:02:43.075Z"}
+{"type":"feature.close_requested","at":"2026-04-01T23:02:43.077Z"}
+{"type":"effect.requested","effect":{"id":"close.move_spec_to_done","type":"move_spec","payload":{"fromPath":"/Users/jviner/src/brewboard/docs/specs/features/04-in-evaluation/feature-04-rating-system.md","toPath":"/Users/jviner/src/brewboard/docs/specs/features/05-done/feature-04-rating-system.md"}},"at":"2026-04-01T23:02:43.077Z"}
+{"type":"effect.requested","effect":{"id":"close.write_close_note","type":"write_close_note","payload":{"winnerAgentId":"cu"}},"at":"2026-04-01T23:02:43.077Z"}
+{"type":"effect.claimed","effectId":"close.move_spec_to_done","at":"2026-04-01T23:02:43.079Z"}
+{"type":"effect.succeeded","effectId":"close.move_spec_to_done","at":"2026-04-01T23:02:43.081Z"}
+{"type":"effect.claimed","effectId":"close.write_close_note","at":"2026-04-01T23:02:43.082Z"}
+{"type":"effect.succeeded","effectId":"close.write_close_note","at":"2026-04-01T23:02:43.083Z"}
+{"type":"feature.closed","at":"2026-04-01T23:02:43.084Z"}

@@ -1,8 +1,8 @@
 {
   "featureId": "04",
-  "lifecycle": "evaluating",
+  "lifecycle": "done",
   "mode": "fleet",
-  "winnerAgentId": null,
+  "winnerAgentId": "cu",
   "agents": {
     "cc": {
       "id": "cc",
@@ -18,8 +18,8 @@
       "lastHeartbeatExpiredAt": "2026-04-01T22:58:44.771Z"
     }
   },
-  "currentSpecState": "evaluating",
-  "specPath": "/Users/jviner/src/brewboard/docs/specs/features/04-in-evaluation/feature-04-rating-system.md",
+  "currentSpecState": "done",
+  "specPath": "/Users/jviner/src/brewboard/docs/specs/features/05-done/feature-04-rating-system.md",
   "effects": [
     {
       "id": "start.move_spec",
@@ -84,38 +84,36 @@
       "claimExpiredAt": null,
       "reclaimCount": 0,
       "lastError": null
+    },
+    {
+      "id": "close.move_spec_to_done",
+      "type": "move_spec",
+      "payload": {
+        "fromPath": "/Users/jviner/src/brewboard/docs/specs/features/05-done/feature-04-rating-system.md",
+        "toPath": "/Users/jviner/src/brewboard/docs/specs/features/05-done/feature-04-rating-system.md"
+      },
+      "status": "succeeded",
+      "claimedAt": null,
+      "claimExpiredAt": null,
+      "reclaimCount": 0,
+      "lastError": null
+    },
+    {
+      "id": "close.write_close_note",
+      "type": "write_close_note",
+      "payload": {
+        "winnerAgentId": "cu"
+      },
+      "status": "succeeded",
+      "claimedAt": null,
+      "claimExpiredAt": null,
+      "reclaimCount": 0,
+      "lastError": null
     }
   ],
   "lastEffectError": null,
-  "availableActions": [
-    {
-      "kind": "select-winner",
-      "label": "Select winner cc",
-      "eventType": "select-winner",
-      "recommendedOrder": 60,
-      "agentId": "cc",
-      "mode": null,
-      "category": "lifecycle",
-      "requiresInput": null,
-      "scope": null,
-      "metadata": null,
-      "clientOnly": false
-    },
-    {
-      "kind": "select-winner",
-      "label": "Select winner cu",
-      "eventType": "select-winner",
-      "recommendedOrder": 60,
-      "agentId": "cu",
-      "mode": null,
-      "category": "lifecycle",
-      "requiresInput": null,
-      "scope": null,
-      "metadata": null,
-      "clientOnly": false
-    }
-  ],
-  "eventCount": 24,
+  "availableActions": [],
+  "eventCount": 33,
   "createdAt": "2026-04-01T22:56:31.709Z",
-  "updatedAt": "2026-04-01T23:01:26.935Z"
+  "updatedAt": "2026-04-01T23:02:43.084Z"
 }

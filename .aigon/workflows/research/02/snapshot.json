@@ -1,15 +1,41 @@
 {
-  "featureId": "02",
-  "lifecycle": "backlog",
-  "mode": null,
-  "winnerAgentId": null,
-  "agents": {},
-  "currentSpecState": "backlog",
-  "specPath": "/Users/jviner/src/brewboard/docs/specs/research-topics/02-backlog/research-02-offline-sync.md",
+  "researchId": "02",
+  "entityType": "research",
+  "lifecycle": "implementing",
+  "mode": "fleet",
+  "agents": {
+    "cc": {
+      "id": "cc",
+      "status": "ready",
+      "lastHeartbeatAt": "2026-04-01T23:13:22.687Z",
+      "restartCount": 0
+    },
+    "cu": {
+      "id": "cu",
+      "status": "ready",
+      "lastHeartbeatAt": "2026-04-01T23:08:18.504Z",
+      "restartCount": 0
+    }
+  },
+  "currentSpecState": "implementing",
+  "specPath": "/Users/jviner/src/brewboard/docs/specs/research-topics/03-in-progress/research-02-offline-sync.md",
   "effects": [],
   "lastEffectError": null,
-  "availableActions": [],
-  "eventCount": 1,
-  "createdAt": "2026-04-01T23:01:29.836Z",
-  "updatedAt": "2026-04-01T23:01:29.836Z"
+  "availableActions": [
+    {
+      "kind": "research-eval",
+      "label": "Start evaluation",
+      "eventType": "research.eval",
+      "recommendedOrder": 50,
+      "mode": "agent",
+      "category": "lifecycle",
+      "requiresInput": null,
+      "scope": null,
+      "metadata": null,
+      "clientOnly": false
+    }
+  ],
+  "eventCount": 8,
+  "createdAt": "2026-04-01T23:05:12.695Z",
+  "updatedAt": "2026-04-01T23:13:22.687Z"
 }
