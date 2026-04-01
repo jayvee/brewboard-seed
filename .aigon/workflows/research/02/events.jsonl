@@ -6,3 +6,8 @@
 {"type":"signal.agent_ready","agentId":"cu","at":"2026-04-01T23:08:18.504Z"}
 {"type":"signal.agent_ready","agentId":"cc","at":"2026-04-01T23:09:19.881Z"}
 {"type":"signal.heartbeat","agentId":"cc","at":"2026-04-01T23:13:22.687Z"}
+{"type":"research.eval_requested","at":"2026-04-01T23:17:04.269Z"}
+{"type":"research.close_requested","at":"2026-04-01T23:18:42.108Z"}
+{"type":"effect.requested","effect":{"id":"close.move_spec_to_done","type":"move_spec","payload":{"fromPath":"/Users/jviner/src/brewboard/docs/specs/research-topics/04-in-evaluation/research-02-offline-sync.md","toPath":"/Users/jviner/src/brewboard/docs/specs/research-topics/05-done/research-02-offline-sync.md"}},"at":"2026-04-01T23:18:42.112Z"}
+{"type":"effect.succeeded","effectId":"close.move_spec_to_done","at":"2026-04-01T23:18:42.115Z"}
+{"type":"research.closed","at":"2026-04-01T23:18:42.116Z"}

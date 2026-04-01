@@ -1,0 +1,81 @@
+{
+  "researchId": "03",
+  "entityType": "research",
+  "lifecycle": "implementing",
+  "mode": "fleet",
+  "agents": {
+    "cc": {
+      "id": "cc",
+      "status": "running",
+      "lastHeartbeatAt": "2026-04-01T23:18:56.747Z",
+      "restartCount": 0
+    },
+    "cu": {
+      "id": "cu",
+      "status": "running",
+      "lastHeartbeatAt": "2026-04-01T23:18:56.758Z",
+      "restartCount": 0
+    }
+  },
+  "currentSpecState": "implementing",
+  "specPath": "/Users/jviner/src/brewboard/docs/specs/research-topics/03-in-progress/research-03-payment-providers.md",
+  "effects": [],
+  "lastEffectError": null,
+  "availableActions": [
+    {
+      "kind": "open-session",
+      "label": "Open cc",
+      "eventType": null,
+      "recommendedOrder": 5,
+      "agentId": "cc",
+      "mode": null,
+      "category": "session",
+      "requiresInput": null,
+      "scope": null,
+      "metadata": null,
+      "clientOnly": false
+    },
+    {
+      "kind": "open-session",
+      "label": "Open cu",
+      "eventType": null,
+      "recommendedOrder": 5,
+      "agentId": "cu",
+      "mode": null,
+      "category": "session",
+      "requiresInput": null,
+      "scope": null,
+      "metadata": null,
+      "clientOnly": false
+    },
+    {
+      "kind": "research-stop",
+      "label": "Stop cc",
+      "eventType": null,
+      "recommendedOrder": 15,
+      "agentId": "cc",
+      "mode": null,
+      "category": "agent-control",
+      "requiresInput": null,
+      "scope": null,
+      "metadata": null,
+      "clientOnly": false
+    },
+    {
+      "kind": "research-stop",
+      "label": "Stop cu",
+      "eventType": null,
+      "recommendedOrder": 15,
+      "agentId": "cu",
+      "mode": null,
+      "category": "agent-control",
+      "requiresInput": null,
+      "scope": null,
+      "metadata": null,
+      "clientOnly": false
+    }
+  ],
+  "eventCount": 3,
+  "createdAt": "2026-04-01T23:18:56.489Z",
+  "updatedAt": "2026-04-01T23:18:56.758Z"
+}

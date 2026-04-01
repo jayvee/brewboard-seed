@@ -1,7 +1,7 @@
 {
   "researchId": "02",
   "entityType": "research",
-  "lifecycle": "implementing",
+  "lifecycle": "done",
   "mode": "fleet",
   "agents": {
     "cc": {
@@ -17,25 +17,26 @@
       "restartCount": 0
     }
   },
-  "currentSpecState": "implementing",
-  "specPath": "/Users/jviner/src/brewboard/docs/specs/research-topics/03-in-progress/research-02-offline-sync.md",
-  "effects": [],
-  "lastEffectError": null,
-  "availableActions": [
+  "currentSpecState": "done",
+  "specPath": "/Users/jviner/src/brewboard/docs/specs/research-topics/05-done/research-02-offline-sync.md",
+  "effects": [
     {
-      "kind": "research-eval",
-      "label": "Start evaluation",
-      "eventType": "research.eval",
-      "recommendedOrder": 50,
-      "mode": "agent",
-      "category": "lifecycle",
-      "requiresInput": null,
-      "scope": null,
-      "metadata": null,
-      "clientOnly": false
+      "id": "close.move_spec_to_done",
+      "type": "move_spec",
+      "payload": {
+        "fromPath": "/Users/jviner/src/brewboard/docs/specs/research-topics/05-done/research-02-offline-sync.md",
+        "toPath": "/Users/jviner/src/brewboard/docs/specs/research-topics/05-done/research-02-offline-sync.md"
+      },
+      "status": "succeeded",
+      "claimedAt": null,
+      "claimExpiredAt": null,
+      "reclaimCount": 0,
+      "lastError": null
     }
   ],
-  "eventCount": 8,
+  "lastEffectError": null,
+  "availableActions": [],
+  "eventCount": 13,
   "createdAt": "2026-04-01T23:05:12.695Z",
-  "updatedAt": "2026-04-01T23:13:22.687Z"
+  "updatedAt": "2026-04-01T23:18:42.116Z"
 }

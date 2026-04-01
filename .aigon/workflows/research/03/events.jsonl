@@ -1,0 +1,3 @@
+{"type":"research.started","researchId":"03","mode":"fleet","agents":["cc","cu"],"at":"2026-04-01T23:18:56.489Z"}
+{"type":"signal.heartbeat","agentId":"cc","at":"2026-04-01T23:18:56.747Z"}
+{"type":"signal.heartbeat","agentId":"cu","at":"2026-04-01T23:18:56.758Z"}
