@@ -5,4 +5,6 @@ Agent: cu
 
 ## Progress
 
+Implemented `src/components/profile-card.tsx` (default export, `username` / `beerCount` props, h2 + p).
+
 ## Decisions
