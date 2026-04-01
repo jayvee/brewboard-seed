@@ -5,4 +5,6 @@ Agent: cu
 
 ## Progress
 
+Implemented dark mode: ThemeProvider reads `prefers-color-scheme` and `brewboard-theme` in localStorage, applies `dark` on `<html>`, ThemeToggle in layout.
+
 ## Decisions
