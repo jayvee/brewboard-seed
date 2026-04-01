@@ -121,36 +121,14 @@ Implement the feature according to the spec. Commit with conventional commits (`
 
 
 
-### Before stopping: set up for manual review
 
-1. Start the dev server (if not already running):
-   ```bash
-   aigon dev-server start
-   ```
-2. Open it in the browser:
-   ```bash
-   aigon dev-server open
-   ```
-3. Generate a **Manual Testing Checklist**: re-read the spec Acceptance Criteria and write a numbered list of concrete, human-executable steps to verify each one (e.g. "Navigate to /settings → fill in the form → click Save → verify the success message appears"). Present the checklist in your response before stopping.
 
 **Signal that implementation is complete:**
 ```bash
 aigon agent-status submitted
 ```
 
-## Step 6: Update and commit the log
 
-Find your implementation log:
-- Drive mode (branch): `./docs/specs/features/logs/feature-{{ARG1_SYNTAX}}-*-log.md`
-- Worktree mode: `./docs/specs/features/logs/feature-{{ARG1_SYNTAX}}-<agent>-*-log.md`
-
-Update it with:
-- Key decisions made during implementation
-- Summary of the conversation between you and the user
-- Any issues encountered and how they were resolved
-- Your approach and rationale (for Fleet mode, helps evaluator compare)
-
-**Then commit the log file.**
 
 ## Step 7: STOP — Implementation complete
 

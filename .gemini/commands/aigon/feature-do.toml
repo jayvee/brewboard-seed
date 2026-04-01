@@ -47,24 +47,11 @@ This command detects whether you're in Drive or Fleet mode and provides guidance
 aigon feature-do {{args}}
 ```
 
-To run in **Autopilot mode** — autonomous retry loop where a fresh agent session is spawned each iteration until validation passes:
 
-```bash
-aigon feature-do {{ARG1_SYNTAX}} --autonomous
-```
-
-Optional flags: `--max-iterations=N` (default 5) · `--agent=<id>` · `--dry-run`
-
-> **What is autonomous mode?** The autonomous technique runs an agent in a loop: implement → validate → if fail, repeat with fresh context until success or max iterations. Add a `## Validation` section to your feature spec to define feature-specific checks alongside project-level validation.
 
 The command will detect your mode (Drive/worktree/Fleet) and display the spec location.
 
-**If the CLI fails with "Could not find feature in in-progress"** and you're in a worktree: the spec move was likely not committed before the worktree was created. Fix by running these commands from the worktree:
-```bash
-SPEC_PATH=$(aigon feature-spec {{ARG1_SYNTAX}})
-git checkout main -- "$SPEC_PATH"
-git commit -m "chore: sync spec to worktree branch"
-```
+
 
 ## Step 2: Read the spec
 
@@ -120,57 +107,13 @@ Stage and commit your code changes using conventional commits (`feat:`, `fix:`, 
 
 
 
-## Step 4: Test your changes
-The **dev server** runs a local development server of this project's source code (e.g. Next.js, Vite, etc.) so you can verify your changes work correctly.
-**IMPORTANT:** `aigon dev-server start` starts the **project's** dev server (e.g. `npm run dev`) with managed port allocation. Never run `aigon server` to test your work.
-### Drive Mode (branch)
-- Start the dev server: `aigon dev-server start`
-- Use the URL printed by the command to access the app
-- Run the full test suite and verify all tests pass
-- Ask the user to verify
-### Worktree Mode (Drive worktree or Fleet)
-- **NEVER run `npm run dev` or `next dev` directly** — this bypasses port allocation and will cause port conflicts
-- Run `aigon dev-server start` — allocates your agent's unique port, starts the server, registers with the proxy, and waits for healthy
-- Use the URL printed by the command (e.g. `http://cx-121.myapp.test`) — always use the allocated URL
-- Use `aigon dev-server logs` to check startup output if anything seems wrong
-- Ask the user to verify
-> **Project-specific steps?** Check your root instructions file (e.g. AGENTS.md) for test commands.
-### Before stopping: set up for manual review
+## Step 4: Start the dev server
 
-1. Start the dev server (if not already running):
-   ```bash
-   aigon dev-server start
-   ```
-2. Open it in the browser:
-   ```bash
-   aigon dev-server open
-   ```
-3. Generate a **Manual Testing Checklist**: re-read the spec Acceptance Criteria and write a numbered list of concrete, human-executable steps to verify each one (e.g. "Navigate to /settings → fill in the form → click Save → verify the success message appears"). Present the checklist in your response before stopping.
+Run `aigon dev-server start` to start the project dev server. Use the URL printed to verify your changes. **Never run `npm run dev` directly** — it bypasses port allocation.
 
-## Step 4.5: Update documentation if needed
 
-If your changes affect any of the following, update the relevant docs **before committing**:
 
-- **New modules or files** → update Module Map in `CLAUDE.md` and `docs/architecture.md`
-- **New repo structure or external dependencies** → update `docs/architecture.md`
-- **New patterns or conventions agents should follow** → update `CLAUDE.md` and/or `AGENTS.md`
-- **Cross-repo changes (e.g., `@aigon/pro`)** → note what changed in both repos
 
-Documentation ships with the code, not as a follow-up.
-
-## Step 6: Update and commit the log
-
-Find your implementation log:
-- Drive mode (branch): `./docs/specs/features/logs/feature-{{ARG1_SYNTAX}}-*-log.md`
-- Worktree mode: `./docs/specs/features/logs/feature-{{ARG1_SYNTAX}}-<agent>-*-log.md`
-
-Update it with:
-- Key decisions made during implementation
-- Summary of the conversation between you and the user
-- Any issues encountered and how they were resolved
-- Your approach and rationale (for Fleet mode, helps evaluator compare)
-
-**Then commit the log file.**
 
 ## Step 6.5: Start the dev server
 
