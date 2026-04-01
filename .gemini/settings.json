@@ -1,0 +1,33 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/jviner/.local/state/fnm_multishells/39746_1774779694101/bin/aigon check-version",
+            "timeout": 30
+          },
+          {
+            "type": "command",
+            "command": "/Users/jviner/.local/state/fnm_multishells/39746_1774779694101/bin/aigon project-context",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "AfterAgent": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/jviner/.local/state/fnm_multishells/39746_1774779694101/bin/aigon check-agent-signal",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
