@@ -1,0 +1,41 @@
+{
+  "researchId": "01",
+  "entityType": "research",
+  "lifecycle": "implementing",
+  "mode": "fleet",
+  "agents": {
+    "cc": {
+      "id": "cc",
+      "status": "ready",
+      "lastHeartbeatAt": "2026-04-01T21:42:34.607Z",
+      "restartCount": 0
+    },
+    "cu": {
+      "id": "cu",
+      "status": "ready",
+      "lastHeartbeatAt": "2026-04-01T21:37:15.068Z",
+      "restartCount": 0
+    }
+  },
+  "currentSpecState": "implementing",
+  "specPath": "/Users/jviner/src/brewboard/docs/specs/research-topics/03-in-progress/research-01-caching-strategy.md",
+  "effects": [],
+  "lastEffectError": null,
+  "availableActions": [
+    {
+      "kind": "research-eval",
+      "label": "Start evaluation",
+      "eventType": "research.eval",
+      "recommendedOrder": 50,
+      "mode": "agent",
+      "category": "lifecycle",
+      "requiresInput": null,
+      "scope": null,
+      "metadata": null,
+      "clientOnly": false
+    }
+  ],
+  "eventCount": 8,
+  "createdAt": "2026-04-01T21:33:42.363Z",
+  "updatedAt": "2026-04-01T21:42:34.607Z"
+}

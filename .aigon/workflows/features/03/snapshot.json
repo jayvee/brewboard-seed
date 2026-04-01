@@ -1,0 +1,15 @@
+{
+  "featureId": "03",
+  "lifecycle": "backlog",
+  "mode": null,
+  "winnerAgentId": null,
+  "agents": {},
+  "currentSpecState": "backlog",
+  "specPath": "/Users/jviner/src/brewboard/docs/specs/features/02-backlog/feature-03-user-profiles.md",
+  "effects": [],
+  "lastEffectError": null,
+  "availableActions": [],
+  "eventCount": 1,
+  "createdAt": "2026-04-01T23:01:29.835Z",
+  "updatedAt": "2026-04-01T23:01:29.835Z"
+}

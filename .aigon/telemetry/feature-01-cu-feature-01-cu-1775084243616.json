@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "source": "feature-close-fallback",
+  "sessionId": "feature-01-cu-1775084243616",
+  "entityType": "feature",
+  "featureId": "01",
+  "repoPath": "/Users/jviner/src/brewboard",
+  "agent": "cu",
+  "model": "cu-cli",
+  "startAt": "2026-04-01T22:57:23.616Z",
+  "endAt": "2026-04-01T22:57:23.616Z",
+  "turnCount": 0,
+  "toolCalls": 0,
+  "tokenUsage": {
+    "input": 0,
+    "output": 0,
+    "cacheReadInput": 0,
+    "cacheCreationInput": 0,
+    "thinking": 0,
+    "total": 0,
+    "billable": 0
+  },
+  "costUsd": 0
+}

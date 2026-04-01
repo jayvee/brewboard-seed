@@ -1,0 +1,15 @@
+{
+  "featureId": "06",
+  "lifecycle": "done",
+  "mode": null,
+  "winnerAgentId": null,
+  "agents": {},
+  "currentSpecState": "done",
+  "specPath": "/Users/jviner/src/brewboard/docs/specs/features/05-done/feature-06-search.md",
+  "effects": [],
+  "lastEffectError": null,
+  "availableActions": [],
+  "eventCount": 1,
+  "createdAt": "2026-04-01T23:01:29.836Z",
+  "updatedAt": "2026-04-01T23:01:29.836Z"
+}

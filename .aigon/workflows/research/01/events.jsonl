@@ -1,0 +1,8 @@
+{"type":"research.started","researchId":"01","mode":"fleet","agents":["cc","cu"],"at":"2026-04-01T21:33:42.363Z"}
+{"type":"signal.heartbeat","agentId":"cc","at":"2026-04-01T21:33:42.628Z"}
+{"type":"signal.heartbeat","agentId":"cu","at":"2026-04-01T21:33:42.639Z"}
+{"type":"signal.heartbeat","agentId":"cc","at":"2026-04-01T21:33:55.020Z"}
+{"type":"signal.heartbeat","agentId":"cu","at":"2026-04-01T21:35:17.787Z"}
+{"type":"signal.agent_submitted","agentId":"cu","at":"2026-04-01T21:37:15.068Z"}
+{"type":"signal.agent_ready","agentId":"cc","at":"2026-04-01T21:38:04.690Z"}
+{"type":"signal.heartbeat","agentId":"cc","at":"2026-04-01T21:42:34.607Z"}

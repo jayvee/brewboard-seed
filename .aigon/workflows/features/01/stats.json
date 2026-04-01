@@ -1,0 +1,24 @@
+{
+  "startedAt": "2026-04-01T21:33:00.250Z",
+  "mode": "fleet",
+  "agents": [
+    "cc",
+    "cu"
+  ],
+  "updatedAt": "2026-04-01T22:57:23.700Z",
+  "completedAt": "2026-04-01T22:57:23.617Z",
+  "durationMs": 5063367,
+  "commitCount": 2,
+  "filesChanged": 13,
+  "linesAdded": 87,
+  "linesRemoved": 232,
+  "lastCommitAt": "2026-04-02T08:33:32+11:00",
+  "lastCommitMessage": "feat: add dark mode toggle with OS preference and localStorage persistence",
+  "cost": {
+    "inputTokens": 0,
+    "outputTokens": 0,
+    "estimatedUsd": 0,
+    "model": "cu-cli",
+    "sessions": 1
+  }
+}

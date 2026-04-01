@@ -1,0 +1,121 @@
+{
+  "featureId": "04",
+  "lifecycle": "evaluating",
+  "mode": "fleet",
+  "winnerAgentId": null,
+  "agents": {
+    "cc": {
+      "id": "cc",
+      "status": "ready",
+      "lastHeartbeatAt": "2026-04-01T23:01:26.935Z",
+      "restartCount": 0
+    },
+    "cu": {
+      "id": "cu",
+      "status": "ready",
+      "lastHeartbeatAt": "2026-04-01T23:00:07.062Z",
+      "restartCount": 0,
+      "lastHeartbeatExpiredAt": "2026-04-01T22:58:44.771Z"
+    }
+  },
+  "currentSpecState": "evaluating",
+  "specPath": "/Users/jviner/src/brewboard/docs/specs/features/04-in-evaluation/feature-04-rating-system.md",
+  "effects": [
+    {
+      "id": "start.move_spec",
+      "type": "move_spec",
+      "payload": {
+        "fromPath": "/Users/jviner/src/brewboard/docs/specs/features/02-backlog/feature-04-rating-system.md",
+        "toPath": "/Users/jviner/src/brewboard/docs/specs/features/03-in-progress/feature-04-rating-system.md"
+      },
+      "status": "succeeded",
+      "claimedAt": null,
+      "claimExpiredAt": null,
+      "reclaimCount": 0,
+      "lastError": null
+    },
+    {
+      "id": "start.init_log_cc",
+      "type": "init_log",
+      "payload": {
+        "agentId": "cc",
+        "num": "04",
+        "desc": "rating-system"
+      },
+      "status": "succeeded",
+      "claimedAt": null,
+      "claimExpiredAt": null,
+      "reclaimCount": 0,
+      "lastError": null
+    },
+    {
+      "id": "start.init_log_cu",
+      "type": "init_log",
+      "payload": {
+        "agentId": "cu",
+        "num": "04",
+        "desc": "rating-system"
+      },
+      "status": "succeeded",
+      "claimedAt": null,
+      "claimExpiredAt": null,
+      "reclaimCount": 0,
+      "lastError": null
+    },
+    {
+      "id": "eval.move_spec",
+      "type": "move_spec",
+      "payload": {
+        "fromPath": "/Users/jviner/src/brewboard/docs/specs/features/03-in-progress/feature-04-rating-system.md",
+        "toPath": "/Users/jviner/src/brewboard/docs/specs/features/04-in-evaluation/feature-04-rating-system.md"
+      },
+      "status": "succeeded",
+      "claimedAt": null,
+      "claimExpiredAt": null,
+      "reclaimCount": 0,
+      "lastError": null
+    },
+    {
+      "id": "eval.write_eval_stub",
+      "type": "write_eval_stub",
+      "payload": {},
+      "status": "succeeded",
+      "claimedAt": null,
+      "claimExpiredAt": null,
+      "reclaimCount": 0,
+      "lastError": null
+    }
+  ],
+  "lastEffectError": null,
+  "availableActions": [
+    {
+      "kind": "select-winner",
+      "label": "Select winner cc",
+      "eventType": "select-winner",
+      "recommendedOrder": 60,
+      "agentId": "cc",
+      "mode": null,
+      "category": "lifecycle",
+      "requiresInput": null,
+      "scope": null,
+      "metadata": null,
+      "clientOnly": false
+    },
+    {
+      "kind": "select-winner",
+      "label": "Select winner cu",
+      "eventType": "select-winner",
+      "recommendedOrder": 60,
+      "agentId": "cu",
+      "mode": null,
+      "category": "lifecycle",
+      "requiresInput": null,
+      "scope": null,
+      "metadata": null,
+      "clientOnly": false
+    }
+  ],
+  "eventCount": 24,
+  "createdAt": "2026-04-01T22:56:31.709Z",
+  "updatedAt": "2026-04-01T23:01:26.935Z"
+}

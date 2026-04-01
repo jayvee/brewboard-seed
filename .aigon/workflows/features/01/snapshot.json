@@ -1,0 +1,119 @@
+{
+  "featureId": "01",
+  "lifecycle": "done",
+  "mode": "fleet",
+  "winnerAgentId": "cc",
+  "agents": {
+    "cc": {
+      "id": "cc",
+      "status": "ready",
+      "lastHeartbeatAt": "2026-04-01T21:42:25.789Z",
+      "restartCount": 0
+    },
+    "cu": {
+      "id": "cu",
+      "status": "ready",
+      "lastHeartbeatAt": "2026-04-01T21:39:39.283Z",
+      "restartCount": 0,
+      "lastHeartbeatExpiredAt": "2026-04-01T21:35:13.783Z"
+    }
+  },
+  "currentSpecState": "done",
+  "specPath": "/Users/jviner/src/brewboard/docs/specs/features/05-done/feature-01-dark-mode.md",
+  "effects": [
+    {
+      "id": "start.move_spec",
+      "type": "move_spec",
+      "payload": {
+        "fromPath": "/Users/jviner/src/brewboard/docs/specs/features/02-backlog/feature-01-dark-mode.md",
+        "toPath": "/Users/jviner/src/brewboard/docs/specs/features/03-in-progress/feature-01-dark-mode.md"
+      },
+      "status": "succeeded",
+      "claimedAt": null,
+      "claimExpiredAt": null,
+      "reclaimCount": 0,
+      "lastError": null
+    },
+    {
+      "id": "start.init_log_cc",
+      "type": "init_log",
+      "payload": {
+        "agentId": "cc",
+        "num": "01",
+        "desc": "dark-mode"
+      },
+      "status": "succeeded",
+      "claimedAt": null,
+      "claimExpiredAt": null,
+      "reclaimCount": 0,
+      "lastError": null
+    },
+    {
+      "id": "start.init_log_cu",
+      "type": "init_log",
+      "payload": {
+        "agentId": "cu",
+        "num": "01",
+        "desc": "dark-mode"
+      },
+      "status": "succeeded",
+      "claimedAt": null,
+      "claimExpiredAt": null,
+      "reclaimCount": 0,
+      "lastError": null
+    },
+    {
+      "id": "eval.move_spec",
+      "type": "move_spec",
+      "payload": {
+        "fromPath": "/Users/jviner/src/brewboard/docs/specs/features/03-in-progress/feature-01-dark-mode.md",
+        "toPath": "/Users/jviner/src/brewboard/docs/specs/features/04-in-evaluation/feature-01-dark-mode.md"
+      },
+      "status": "succeeded",
+      "claimedAt": null,
+      "claimExpiredAt": null,
+      "reclaimCount": 0,
+      "lastError": null
+    },
+    {
+      "id": "eval.write_eval_stub",
+      "type": "write_eval_stub",
+      "payload": {},
+      "status": "succeeded",
+      "claimedAt": null,
+      "claimExpiredAt": null,
+      "reclaimCount": 0,
+      "lastError": null
+    },
+    {
+      "id": "close.move_spec_to_done",
+      "type": "move_spec",
+      "payload": {
+        "fromPath": "/Users/jviner/src/brewboard/docs/specs/features/05-done/feature-01-dark-mode.md",
+        "toPath": "/Users/jviner/src/brewboard/docs/specs/features/05-done/feature-01-dark-mode.md"
+      },
+      "status": "succeeded",
+      "claimedAt": null,
+      "claimExpiredAt": null,
+      "reclaimCount": 0,
+      "lastError": null
+    },
+    {
+      "id": "close.write_close_note",
+      "type": "write_close_note",
+      "payload": {
+        "winnerAgentId": "cc"
+      },
+      "status": "succeeded",
+      "claimedAt": null,
+      "claimExpiredAt": null,
+      "reclaimCount": 0,
+      "lastError": null
+    }
+  ],
+  "lastEffectError": null,
+  "availableActions": [],
+  "eventCount": 34,
+  "createdAt": "2026-04-01T21:33:00.202Z",
+  "updatedAt": "2026-04-01T22:57:23.712Z"
+}
