@@ -7,7 +7,26 @@
       "models": {}
     },
     "cx": {
-      "models": {}
+      "research": {
+        "model": "gpt-5.4-mini"
+      },
+      "implement": {
+        "model": "gpt-5.4-mini"
+      },
+      "evaluate": {
+        "model": "gpt-5.4-mini"
+      }
+    },
+    "cu": {
+      "research": {
+        "model": "composer-1"
+      },
+      "implement": {
+        "model": "composer-1"
+      },
+      "evaluate": {
+        "model": "composer-1"
+      }
     }
   },
   "devProxy": {
