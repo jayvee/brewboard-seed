@@ -12,9 +12,17 @@ const BEERS = [
 export default function Home() {
   return (
     <main className="max-w-4xl mx-auto p-8">
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold text-stone-900">BrewBoard</h1>
-        <p className="text-stone-500 mt-2">Your craft beer collection</p>
+      <header className="mb-8 flex items-start justify-between">
+        <div>
+          <h1 className="text-4xl font-bold text-stone-900">BrewBoard</h1>
+          <p className="text-stone-500 mt-2">Your craft beer collection</p>
+        </div>
+        <a
+          href="/pricing"
+          className="mt-1 px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-medium rounded-lg transition-colors"
+        >
+          Go Pro
+        </a>
       </header>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {BEERS.map(beer => (
