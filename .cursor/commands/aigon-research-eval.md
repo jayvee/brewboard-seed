@@ -1,7 +1,3 @@
----
-description: Evaluate research <ID> - synthesize findings and recommend features (shortcut for research-eval)
-argument-hint: "<ID> [--force]"
----
 # aigon-research-eval
 
 Evaluate and synthesize research findings from ALL agents, help the user select features, and update the main research document. This transitions research from in-progress to in-evaluation (matching the feature pipeline).
@@ -27,7 +23,7 @@ claude --model sonnet
 IMPORTANT: You MUST run this command first. It transitions the engine state to evaluating and moves the spec to the evaluation folder.
 
 ```bash
-aigon research-eval {{args}}
+aigon research-eval <name>
 ```
 
 ## Step 2: Read All Findings
@@ -149,8 +145,8 @@ After updating the document, commit your changes and signal completion:
 
 ```bash
 git add docs/specs/research-topics/
-git commit -m "docs: research evaluation for {{args}}"
-aigon research-submit {{args}}
+git commit -m "docs: research evaluation for <name>"
+aigon research-submit <name>
 ```
 
 Then tell the user:
@@ -168,4 +164,4 @@ Then tell the user:
 - Created features must include a research origin backlink
 
 
-ARGUMENTS: {{args}}
+ARGUMENTS: <args>

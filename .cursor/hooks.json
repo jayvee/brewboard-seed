@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "sessionStart": [
+      {
+        "command": "/Users/jviner/.local/state/fnm_multishells/62126_1775041684382/bin/aigon check-version",
+        "timeout": 30
+      }
+    ]
+  }
+}
