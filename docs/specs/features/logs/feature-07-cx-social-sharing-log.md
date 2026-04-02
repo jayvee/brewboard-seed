@@ -2,7 +2,10 @@
 Agent: cx
 
 ## Plan
+- None.
 
 ## Progress
+- Implemented `buildShareUrl` to generate Twitter intent tweets and Facebook sharer URLs for beer reviews.
 
 ## Decisions
+- None.
