@@ -5,4 +5,6 @@ Agent: cu
 
 ## Progress
 
+Implemented `StarRating` in `src/components/star-rating.tsx` (half-star rounding, ★/½/☆).
+
 ## Decisions
