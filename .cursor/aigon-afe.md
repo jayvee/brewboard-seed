@@ -1,7 +1,3 @@
----
-description: Evaluate feature <ID> - code review or comparison (shortcut for feature-eval)
-argument-hint: "<ID> [--allow-same-model-judge] [--force]"
----
 # aigon-feature-eval
 
 Evaluate a feature implementation. Works in both Drive mode (code review) and Fleet mode (comparison).
@@ -18,24 +14,24 @@ If no ID is provided, or the ID doesn't match an existing feature:
 IMPORTANT: You MUST run this command first.
 
 ```bash
-aigon feature-eval {{args}}
+aigon feature-eval <name>
 ```
 
 Optional overrides:
 
 ```bash
-aigon feature-eval {{args}} --allow-same-model-judge
+aigon feature-eval <name> --allow-same-model-judge
 ```
 
 This will:
 - Move the spec to `04-in-evaluation/` (if not already there)
-- Create an evaluation template at `./docs/specs/features/evaluations/feature-{{args}}-eval.md`
+- Create an evaluation template at `./docs/specs/features/evaluations/feature-<name>-eval.md`
 - Detect mode (Drive or Fleet)
 - Warn if the evaluator shares a provider family with the implementer (same-family bias detection)
 - Commit the changes
 
 **IMPORTANT:** After the CLI command completes, open the evaluation file in markdown preview mode in a separate window:
-- File: `./docs/specs/features/evaluations/feature-{{args}}-eval.md`
+- File: `./docs/specs/features/evaluations/feature-<name>-eval.md`
 - Open the file, then use Cursor's command palette (`Cmd+Shift+P` / `Ctrl+Shift+P`) and run: `Markdown: Open Preview` (or press `Cmd+Shift+V` / `Ctrl+Shift+V`)
 - This will open the markdown preview in a separate window for easy reference while you work
 
@@ -44,7 +40,7 @@ This will:
 Read the exact feature spec path returned by:
 
 ```bash
-aigon feature-spec {{args}}
+aigon feature-spec <name>
 ```
 
 ## Step 3: Review the implementation(s)
@@ -53,8 +49,8 @@ aigon feature-spec {{args}}
 
 Review the single implementation:
 
-1. Read the implementation log: `./docs/specs/features/logs/feature-{{args}}-*-log.md`
-2. Review the code changes: `git diff main..feature-{{args}}-*`
+1. Read the implementation log: `./docs/specs/features/logs/feature-<name>-*-log.md`
+2. Review the code changes: `git diff main..feature-<name>-*`
 3. Check if the implementation meets the spec requirements
 4. Verify code quality, testing, documentation, security
 
@@ -63,18 +59,18 @@ Review the single implementation:
 Review each agent's implementation:
 
 1. For each agent worktree listed:
-   - Read implementation log from the worktree (e.g., `../feature-{{args}}-cc-*/docs/specs/features/logs/feature-{{args}}-cc-*-log.md`)
+   - Read implementation log from the worktree (e.g., `../feature-<name>-cc-*/docs/specs/features/logs/feature-<name>-cc-*-log.md`)
    - **Examine the actual code changes** in each worktree
    - Run `git diff main..HEAD` in each worktree to see all changes
    - Check spec compliance
 
-2. **Worktree locations:** `../feature-{{args}}-<agent>-*`
+2. **Worktree locations:** `../feature-<name>-<agent>-*`
 
 > **Bias guard:** `feature-eval` detects same-family evaluation and warns automatically. Pass `--allow-same-model-judge` to suppress if intentional.
 
 ## Step 4: Write the evaluation
 
-Update `./docs/specs/features/evaluations/feature-{{args}}-eval.md`:
+Update `./docs/specs/features/evaluations/feature-<name>-eval.md`:
 
 ### Drive Mode
 
@@ -143,7 +139,7 @@ After completing the evaluation:
 Once the user approves, tell them to run:
 
 ```
-/aigon:feature-close {{args}}
+/aigon-feature-close <name>
 ```
 
 ### Fleet Mode
@@ -165,14 +161,14 @@ After completing the evaluation:
 Once the user has chosen, tell them to run (from the main repo, not a worktree):
 
 ```
-/aigon:feature-close {{args}} <winning-agent>
+/aigon-feature-close <name> <winning-agent>
 ```
 
-For example: `/aigon:feature-close {{args}} cc` if Claude's implementation wins.
+For example: `/aigon-feature-close <name> cc` if Claude's implementation wins.
 
 ## Prompt Suggestion
 
 End your response with the suggested next command on its own line. This influences Claude Code's prompt suggestion (grey text). Use the actual ID:
 
-- **Drive mode:** `/aigon:feature-close <ID>`
-- **Fleet mode:** `/aigon:feature-close <ID> <winning-agent>`
+- **Drive mode:** `/aigon-feature-close <ID>`
+- **Fleet mode:** `/aigon-feature-close <ID> <winning-agent>`

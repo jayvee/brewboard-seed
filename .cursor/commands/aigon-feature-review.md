@@ -1,7 +1,3 @@
----
-description: Review feature <ID> - code review with fixes by a different agent
-argument-hint: "<ID>"
----
 # aigon-feature-review
 
 Perform a code review on another agent's implementation, making targeted fixes where needed.
@@ -21,7 +17,7 @@ If no ID is provided, or the ID doesn't match an existing feature:
 
 ```bash
 BRANCH=$(git branch --show-current)
-FEATURE_BRANCH=$(git branch --list 'feature-{{args}}-*' | head -1 | tr -d ' *')
+FEATURE_BRANCH=$(git branch --list 'feature-<name>-*' | head -1 | tr -d ' *')
 echo "Current branch: $BRANCH"
 echo "Feature branch: $FEATURE_BRANCH"
 ```
@@ -34,7 +30,7 @@ echo "Feature branch: $FEATURE_BRANCH"
 - `git log main..$FEATURE_BRANCH --oneline` to see commits
 - Do NOT try to cd into the worktree directory — review from main using git.
 - **IMPORTANT: All commits (fixes + log updates) must go to the WORKTREE, not main.**
-  Find the worktree path: `WORKTREE=$(git worktree list | grep "feature-{{args}}" | awk '{print $1}')`
+  Find the worktree path: `WORKTREE=$(git worktree list | grep "feature-<name>" | awk '{print $1}')`
   Then commit using: `git -C "$WORKTREE" add . && git -C "$WORKTREE" commit -m "fix(review): ..."`
   Never commit review changes to main — they will cause merge conflicts on feature-close.
 
@@ -43,7 +39,7 @@ echo "Feature branch: $FEATURE_BRANCH"
 Read the feature spec to understand what was supposed to be built:
 
 ```bash
-SPEC_PATH=$(aigon feature-spec {{args}})
+SPEC_PATH=$(aigon feature-spec <name>)
 cat "$SPEC_PATH"
 ```
 
@@ -51,7 +47,7 @@ cat "$SPEC_PATH"
 
 Read the implementing agent's log to understand their approach and decisions:
 
-- Location: `./docs/specs/features/logs/feature-{{args}}-*-log.md`
+- Location: `./docs/specs/features/logs/feature-<name>-*-log.md`
 
 ## Step 4: Review the implementation
 
@@ -130,7 +126,7 @@ Add a review section to the implementation log:
 
 Commit the log update:
 ```bash
-git add docs/specs/features/logs/feature-{{args}}-*-log.md
+git add docs/specs/features/logs/feature-<name>-*-log.md
 git commit -m "docs(review): add review notes to implementation log"
 ```
 
@@ -154,7 +150,7 @@ Then tell the user: "Code review complete. [N] fix(es) committed." (or "Code rev
 
 The user or original implementing agent should then:
 - Review the fix commits
-- Run `/aigon:feature-close {{args}}` when ready to merge
+- Run `/aigon-feature-close <name>` when ready to merge
 
 ## Tips
 
@@ -166,4 +162,4 @@ The user or original implementing agent should then:
 
 End your response with the suggested next command on its own line. This influences Claude Code's prompt suggestion (grey text). Use the actual ID:
 
-`/aigon:feature-close <ID>`
+`/aigon-feature-close <ID>`

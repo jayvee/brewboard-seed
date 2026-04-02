@@ -1,7 +1,6 @@
----
-description: Evaluate feature <ID> - code review or comparison (shortcut for feature-eval)
-argument-hint: "<ID> [--allow-same-model-judge] [--force]"
----
+name = "feature-eval"
+description = "Evaluate feature <ID> - code review or comparison (shortcut for feature-eval)"
+prompt = """
 # aigon-feature-eval
 
 Evaluate a feature implementation. Works in both Drive mode (code review) and Fleet mode (comparison).
@@ -176,3 +175,4 @@ End your response with the suggested next command on its own line. This influenc
 
 - **Drive mode:** `/aigon:feature-close <ID>`
 - **Fleet mode:** `/aigon:feature-close <ID> <winning-agent>`
+"""
