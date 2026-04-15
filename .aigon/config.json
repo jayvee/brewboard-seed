@@ -1,7 +1,9 @@
 {
   "agents": {
     "cc": {
-      "models": {}
+      "implement": { "model": "sonnet" },
+      "review": { "model": "sonnet" },
+      "evaluate": { "model": "sonnet" }
     },
     "gg": {
       "models": {}
