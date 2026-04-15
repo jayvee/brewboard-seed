@@ -9,15 +9,10 @@
       "models": {}
     },
     "cx": {
-      "research": {
-        "model": "gpt-5.4-mini"
-      },
-      "implement": {
-        "model": "gpt-5.4-mini"
-      },
-      "evaluate": {
-        "model": "gpt-5.4-mini"
-      }
+      "research": { "model": "gpt-5.4-mini" },
+      "implement": { "model": "gpt-5.4-mini" },
+      "review": { "model": "gpt-5.4-mini" },
+      "evaluate": { "model": "gpt-5.4-mini" }
     },
     "cu": {
       "research": {
