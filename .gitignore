@@ -2,3 +2,9 @@ node_modules/
 .next/
 .env*.local
 .aigon/workflows/
+.aigon/.board-map.json
+.aigon/worktree.json
+.aigon/state/
+.aigon/locks/
+next-env.d.ts
+.env.local
