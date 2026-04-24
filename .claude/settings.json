@@ -1,7 +1,46 @@
 {
   "permissions": {
     "allow": [
-      "Bash(aigon:*)"
+      "Bash(aigon:*)",
+      "Bash(npm install*)",
+      "Bash(npm ci*)",
+      "Bash(npm run *)",
+      "Bash(npm test*)",
+      "Bash(npx *)",
+      "Bash(pnpm install*)",
+      "Bash(pnpm run *)",
+      "Bash(pnpm *)",
+      "Bash(yarn install*)",
+      "Bash(yarn *)",
+      "Bash(bun install*)",
+      "Bash(bun run *)",
+      "Bash(node *)",
+      "Bash(git add*)",
+      "Bash(git commit*)",
+      "Bash(git checkout*)",
+      "Bash(git push*)",
+      "Bash(git pull*)",
+      "Bash(git fetch*)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git stash*)",
+      "Bash(git rebase*)",
+      "Bash(git merge*)",
+      "Bash(curl *)",
+      "Bash(cat *)",
+      "Bash(ls*)",
+      "Bash(find *)",
+      "Bash(grep *)",
+      "Bash(mkdir *)",
+      "Bash(cp *)",
+      "Bash(mv *)",
+      "Bash(touch *)",
+      "Bash(echo *)",
+      "Bash(pwd)",
+      "Bash(which *)",
+      "Bash(head *)",
+      "Bash(tail *)"
     ],
     "deny": [
       "Bash(rm -rf /)",
@@ -17,12 +56,12 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/opt/homebrew/bin/aigon check-version",
+            "command": "/bin/zsh -l -c \"aigon check-version\"",
             "timeout": 30
           },
           {
             "type": "command",
-            "command": "/opt/homebrew/bin/aigon project-context",
+            "command": "/bin/zsh -l -c \"aigon project-context\"",
             "timeout": 10
           }
         ]
@@ -34,7 +73,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/opt/homebrew/bin/aigon capture-session-telemetry",
+            "command": "/bin/zsh -l -c \"aigon capture-session-telemetry\"",
             "timeout": 30
           }
         ]
@@ -46,7 +85,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/opt/homebrew/bin/aigon check-agent-submitted",
+            "command": "/bin/zsh -l -c \"aigon check-agent-submitted\"",
             "timeout": 5
           }
         ]
