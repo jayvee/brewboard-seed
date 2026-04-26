@@ -1,0 +1,25 @@
+{
+  "fromVersion": null,
+  "toVersion": "2.56.0",
+  "migratedAt": "2026-04-26T14:10:19.446Z",
+  "status": "success",
+  "entities": {
+    "features": {
+      "migrated": [],
+      "skipped": []
+    },
+    "research": {
+      "migrated": [],
+      "skipped": []
+    },
+    "feedback": {
+      "migrated": [
+        "feedback-01-slow-search",
+        "feedback-02-broken-rating",
+        "feedback-03-dark-mode-flicker",
+        "feedback-04-export-to-csv"
+      ],
+      "skipped": []
+    }
+  }
+}

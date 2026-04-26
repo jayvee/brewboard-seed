@@ -6,9 +6,14 @@ argument-hint: "<ID|slug> [--agent=<agent-id>]"
 
 Review the feature spec itself, not the code. Edit the spec in place using the shared rubric below, then commit the reviewed spec with a `spec-review:` commit.
 
+**Your job: WRITE a review of this spec.** That means reading it, making targeted edits in place, and creating one `spec-review:` commit that records your findings. You are the reviewer. Do not check for or process anyone else's reviews — that is a separate downstream task (`feature-spec-revise`) and is not what you are doing here.
+
+If `git log` shows no prior `spec-review:` commits on this spec, that is expected — your review will be the first. Do **not** exit with "no pending reviews"; that would be the check workflow, not this one.
+
 You are already inside the spec-review task for this feature.
 
 - Do not run `aigon feature-spec-review {{args}}` again.
+- Do not run `aigon feature-spec-revise {{args}}` — that is a different command for a later stage, run by the feature author after reviewers have submitted. It is not your job here.
 - Do not ask the shell to start the same command recursively.
 - Use the resolved spec path below, edit that spec in place, then make the required `spec-review:` commit and run `aigon feature-spec-review-record {{args}}`.
 - If you cannot complete the commit or record step, stop and report the blocker instead of making a generic commit.
@@ -119,11 +124,15 @@ aigon feature-spec-review-record {{args}}
 ## Forbidden
 
 - Running `aigon feature-spec-review {{args}}` from inside this task
+- Running `aigon feature-spec-revise {{args}}` or `aigon feature-spec-revise-record {{args}}` — that is the next stage, not this one
+- Making a `spec-revise:` commit (even `--allow-empty`) — that commit belongs to the revise stage
 - Making a non-`spec-review:` commit
 - Ending the task before `feature-spec-review-record` succeeds
 
-## Report
+## Report to the user
 
-Tell the user what you changed and why. End with:
+Tell the user what you changed and why.
 
-`/aigon:feature-spec-review-check {{args}}`
+Then, as the last line of your reply, print the following **as a literal suggestion for the user to run next** — do not execute it yourself:
+
+`/aigon:feature-spec-revise {{args}}`

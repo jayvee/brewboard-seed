@@ -25,6 +25,8 @@ The spec body was printed inline by `feature-do` above. **Use that copy.** Do no
 
 **Skip plan mode — implement directly.**
 
+{{SET_CONTEXT_SECTION}}
+
 ## Before Step 3: Install dependencies if needed
 
 **Worktrees do not share `node_modules/` with the main repo.** Before running or testing, check if dependencies need to be installed:

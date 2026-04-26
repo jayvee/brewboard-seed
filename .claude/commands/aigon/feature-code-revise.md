@@ -1,8 +1,8 @@
 ---
-description: Check the review just done on the current feature worktree and decide accept/revert/modify (shortcut for feature-code-review-check)
+description: Revise the current feature worktree after code review — decide accept/revert/modify
 argument-hint: "[ID]"
 ---
-# aigon-feature-code-review-check
+# aigon-feature-code-revise
 
 A reviewing agent has just committed fixes (or notes) on this feature branch. Your job — as the **implementing agent** — is to read what the reviewer did, then decide how to respond: **accept**, **revert**, or **modify**.
 
@@ -19,7 +19,7 @@ echo "Branch: $BRANCH"
 
 Expected branch shape: `feature-<slug>-<agent>` (e.g. `feature-check-review-skill-command-cc`).
 
-Parse the `<slug>` out of the branch name (strip the `feature-` prefix and the trailing `-<agent>` suffix where agent is one of `cc, gg, cx, cu, op`). Then resolve the slug to a feature ID by matching against `aigon feature-list --active`:
+Parse the `<slug>` out of the branch name (strip the `feature-` prefix and the trailing `-<agent>` suffix where agent is one of `cc, gg, cx, cu, op, km`). Then resolve the slug to a feature ID by matching against `aigon feature-list --active`:
 
 ```bash
 aigon feature-list --active
@@ -29,7 +29,7 @@ Find the row whose name matches the slug and read its ID.
 
 **If the branch is `main`** or doesn't match the `feature-<slug>-<agent>` pattern: STOP. Print this one-liner and do nothing else:
 
-> Can't infer feature ID — run this inside the feature worktree, or pass an explicit ID (e.g. `/aigon:feature-code-review-check 230`).
+> Can't infer feature ID — run this inside the feature worktree, or pass an explicit ID (e.g. `/aigon:feature-code-revise 230`).
 
 Do **not** guess. Do **not** prompt the user to pick from a list — that's noise. Just stop.
 
@@ -86,6 +86,17 @@ Pick **one** of these three options. Be honest — your job is correctness, not 
   git add <files>
   git commit -m "fix(post-review): <what you changed and why>"
   ```
+
+## Step 4.5: Run the iterate gate if you made code changes
+
+- **Accept**: no code changed — skip this step entirely.
+- **Revert or Modify**:
+
+```bash
+npm run test:iterate
+```
+
+Scoped to your changes, <30s. Do NOT run `npm test` or `npm run test:ui` here; the pre-push gate catches the rest. Fix any failures before reporting in Step 5. See `docs/testing.md` for the full rationale.
 
 ## Step 5: Report
 

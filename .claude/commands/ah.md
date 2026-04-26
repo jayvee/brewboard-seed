@@ -16,9 +16,9 @@ description: Show Aigon commands (shortcut for help)
 | `/aigon:feature-list [--active] [--all] [--json]` | Query feature records without going through the board UI |
 | `/aigon:feature-eval <ID>` | Create evaluation (code review or comparison) |
 | `/aigon:feature-code-review <ID>` | Code review with fixes by a different agent |
-| `/aigon:feature-code-review-check [ID]` | Implementer-side: read the review and decide accept/challenge/modify (infers ID from worktree branch) |
+| `/aigon:feature-code-revise [ID]` | Implementer-side: read the review and decide accept/challenge/modify (infers ID from worktree branch) |
 | `/aigon:feature-spec-review <ID>` | Review the feature spec itself before implementation |
-| `/aigon:feature-spec-review-check <ID>` | Author-side: process pending spec reviews in one pass |
+| `/aigon:feature-spec-revise <ID>` | Author-side: process pending spec reviews in one pass |
 | `/aigon:feature-push [ID] [agent]` | Push feature branch to origin for PR review |
 | `/aigon:feature-close <ID> [agent]` | Merge and complete feature |
 | `/aigon:feature-cleanup <ID>` | Clean up Fleet worktrees and branches |
@@ -34,9 +34,8 @@ description: Show Aigon commands (shortcut for help)
 | `/aigon:research-start <ID> [agents...]` | Setup for Drive or Fleet execution |
 | `/aigon:research-open <ID>` | Re-open or attach Fleet research sessions |
 | `/aigon:research-do <ID>` | Conduct research (write findings) |
-| `/aigon:research-submit [ID]` | Signal research findings complete when using findings files |
 | `/aigon:research-spec-review <ID>` | Review the research spec itself before execution |
-| `/aigon:research-spec-review-check <ID>` | Author-side: process pending research spec reviews in one pass |
+| `/aigon:research-spec-revise <ID>` | Author-side: process pending research spec reviews in one pass |
 | `/aigon:research-eval <ID>` | Evaluate or synthesize parallel findings |
 | `/aigon:research-close <ID>` | Complete a research topic |
 
@@ -61,8 +60,9 @@ description: Show Aigon commands (shortcut for help)
 | cc | Claude Code | `claude --permission-mode acceptEdits` | Auto-edits, prompts for risky Bash |
 | gg | Gemini | `gemini --yolo` | Auto-approves all |
 | cx | Codex | `codex` | Workspace-write, smart approval |
-| cu | Cursor | `agent --force --trust` | Auto-approves commands (yolo mode) |
+| cu | Cursor | `agent --print --force --trust --output-format stream-json` | Auto-approves commands (yolo mode) |
 | op | OpenCode | `opencode run` | run |
+| km | Kimi Code CLI | `kimi --print` | --print |
 
 **Quick-allow when prompted:** Claude `Shift+Tab` • Gemini `2` for always • Cursor "Add to allowlist" • Codex "Allow and remember"
 
@@ -87,13 +87,13 @@ All commands have top-level short aliases prefixed with `a` (for aigon):
 | `/afd` | feature-do | `/ard` | research-do |
 | `/afe` | feature-eval | `/are` | research-eval |
 | `/afr` | feature-code-review | `/arcl` | research-close |
-| `/afrc` | feature-code-review-check | | (codex: `$aigon-feature-code-review-check`) |
+| `/afrv` | feature-code-revise | | (codex: `$aigon-feature-code-revise`) |
 | `/afsr` | feature-spec-review | `/arsr` | research-spec-review |
-| `/afsrc` | feature-spec-review-check | `/arsrc` | research-spec-review-check |
+| `/afsrv` | feature-spec-revise | `/arsrv` | research-spec-revise |
 | `/afcl` | feature-close | `/arap` | research-autopilot |
 | `/ab` | board | `/afbc` | feedback-create |
 | `/afbl` | feedback-list | `/afbt` | feedback-triage |
 | `/ads` | dev-server | `/an` | next |
-| `/ah` | help | `/arsb` | research-submit |
+| `/ah` | help | | |
 
 Run `aigon help` in terminal for full CLI reference.

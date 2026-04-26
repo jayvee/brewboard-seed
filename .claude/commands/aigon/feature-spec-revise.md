@@ -1,8 +1,8 @@
 ---
-description: Check pending feature spec reviews and acknowledge them in one pass
+description: Revise feature spec after pending spec reviews — decide and acknowledge in one pass
 argument-hint: "<ID|slug> [--agent=<agent-id>]"
 ---
-# aigon-feature-spec-review-check
+# aigon-feature-spec-revise
 
 You are the author-side agent. Review all pending `spec-review:` commits on the feature spec, decide what to keep, and land one acknowledgement commit.
 
@@ -23,7 +23,7 @@ If `SPEC_PATH` is empty, stop and report that the feature spec could not be reso
 Find the latest acknowledgement, if any:
 
 ```bash
-LAST_ACK=$(git log --follow --format=%H -n 1 --grep='^spec-review-check:' -- "$SPEC_PATH")
+LAST_ACK=$(git log --follow --format=%H -n 1 --grep='^spec-review-check:' --grep='^spec-revise:' -- "$SPEC_PATH")
 echo "last_ack=${LAST_ACK:-none}"
 ```
 
@@ -58,14 +58,14 @@ After the spec is in its final state, commit exactly once with:
 
 ```bash
 git add "$SPEC_PATH"
-git commit --allow-empty -m "spec-review-check: feature {{args}} — <decision summary>" -m "reviewed: <comma-separated reviewer ids>
+git commit --allow-empty -m "spec-revise: feature {{args}} — <decision summary>" -m "reviewed: <comma-separated reviewer ids>
 
 Decision:
 - <accept|revert|modify summary>
 
 Notes:
 - <important rationale>"
-aigon feature-spec-review-check-record {{args}}
+aigon feature-spec-revise-record {{args}}
 ```
 
 If you reverted review commits, include that rationale in the acknowledgement commit body rather than creating a second ack commit.
