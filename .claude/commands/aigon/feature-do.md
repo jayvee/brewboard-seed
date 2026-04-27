@@ -4,9 +4,16 @@ argument-hint: "<ID> [--agent=<agent-id>] [--iterate] [--max-iterations=N] [--au
 ---
 # aigon-feature-do
 
+> **RUN THIS FIRST — no preamble, no --help, no file searches:**
+> ```bash
+> aigon feature-do {{args}}
+> ```
+> This prints the feature spec inline. Read the output, then follow the steps below.
+> Do NOT search for spec files, do NOT run `aigon --help`, do NOT run `./aigon-cli.js`. Just run the command above.
+
 Implement a feature. Works in Drive mode (branch), Drive worktree, and Fleet mode (competition).
 
-> **Worktree invariant (1 line):** you are already inside the correct repo — run `pwd && git branch --show-current` once to confirm a `feature-<ID>-...` branch in a worktree path, then use paths relative to cwd. If `aigon` fails, read the error — do NOT hunt for `aigon-cli.js`. See `docs/development_workflow.md` § "Worktree discipline" if you hit an edge case.
+> **Worktree invariant:** you are already inside the correct repo. If `aigon` fails, read the error — do NOT hunt for `aigon-cli.js`.
 
 ## Argument Resolution
 If no ID is provided or it doesn't match an active feature, run `aigon feature-list --active`, filter to matches, and ask the user which one.
@@ -26,6 +33,8 @@ The spec body was printed inline by `feature-do` above. **Use that copy.** Do no
 **Skip plan mode — implement directly.**
 
 {{SET_CONTEXT_SECTION}}
+
+{{RESEARCH_CONTEXT_SECTION}}
 
 ## Before Step 3: Install dependencies if needed
 
@@ -76,24 +85,14 @@ Work through the acceptance criteria in order.
 
 Stage and commit using conventional commits (`feat:`, `fix:`, `chore:`). Verify with `git log --oneline -1`.
 
-## Step 4: Start the dev server
-
-Run `aigon dev-server start` to start the project dev server. Use the URL printed to verify your changes. **Never run `npm run dev` directly** — it bypasses port allocation.
-
-**No implementation log (instructions rigor: light).** Proceed directly to **Step 5** (`aigon agent-status submitted`). Do not create `docs/specs/features/logs/feature-{{ARG1_SYNTAX}}-*-log.md`.
-
-## Step 6.5: Start the dev server
-
-**You MUST start the dev server before signalling completion.** The evaluator and user need a running preview of your implementation.
-
-Start the dev server and leave it running.
+**No implementation log (instructions rigor: light).** Proceed directly to **Step 5** (`aigon agent-status implementation-complete`). Do not create `docs/specs/features/logs/feature-{{ARG1_SYNTAX}}-*-log.md`.
 
 ## Step 5: Signal completion
 
 After committing, run **immediately**:
 
 ```bash
-aigon agent-status submitted
+aigon agent-status implementation-complete
 ```
 
 Hard rules:

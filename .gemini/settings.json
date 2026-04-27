@@ -1,0 +1,34 @@
+{
+  "approvalMode": "yolo",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/bin/zsh -l -c \"aigon check-version --json\"",
+            "timeout": 30
+          },
+          {
+            "type": "command",
+            "command": "/bin/zsh -l -c \"aigon project-context --json\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "AfterAgent": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/bin/zsh -l -c \"aigon check-agent-signal --json\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

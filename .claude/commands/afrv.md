@@ -113,7 +113,7 @@ Tell the user:
 After reporting your decision, signal that you have addressed the review feedback:
 
 ```bash
-aigon agent-status feedback-addressed
+aigon agent-status revision-complete
 ```
 
 This tells the AutoConductor that you are done processing the review. **Do NOT run `/aigon:feature-close`.** The user (or AutoConductor) decides when to close the feature.

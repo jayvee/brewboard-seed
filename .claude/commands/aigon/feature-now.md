@@ -120,10 +120,10 @@ Implement the feature according to the spec. Commit with conventional commits (`
 
 **Signal that implementation is complete:**
 ```bash
-aigon agent-status submitted
+aigon agent-status implementation-complete
 ```
 
-**No implementation log (instructions rigor: light).** Proceed directly to **Step 5** (`aigon agent-status submitted`). Do not create `docs/specs/features/logs/feature-{{ARG1_SYNTAX}}-*-log.md`.
+**No implementation log (instructions rigor: light).** Proceed directly to **Step 5** (`aigon agent-status implementation-complete`). Do not create `docs/specs/features/logs/feature-{{ARG1_SYNTAX}}-*-log.md`.
 
 ## Step 7: STOP — Implementation complete
 

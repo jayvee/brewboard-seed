@@ -55,7 +55,7 @@ After the CLI completes, run:
 /aigon:research-do <ID>
 ```
 
-When the research pass is complete, signal completion with `aigon agent-status submitted`, then close with:
+When the research pass is complete, signal completion with `aigon agent-status research-complete`, then close with:
 
 ```bash
 /aigon:research-close <ID>
@@ -69,7 +69,7 @@ After the CLI completes, the research agent session is ready in the worktree con
 /aigon:research-do <ID>
 ```
 
-When the research pass is complete, signal completion with `aigon agent-status submitted`, then close from the main repo:
+When the research pass is complete, signal completion with `aigon agent-status research-complete`, then close from the main repo:
 
 ```bash
 /aigon:research-close <ID>

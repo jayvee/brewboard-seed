@@ -45,9 +45,9 @@ If the branch is `main` (or `master`), skip to **Path D: Main branch**.
 >
 > **Suggested next step:**
 > Commit your changes, update your feature log, then run:
-> `aigon agent-status submitted`
+> `aigon agent-status implementation-complete`
 >
-> Implementation is only complete after `aigon agent-status submitted` succeeds.
+> Implementation is only complete after `aigon agent-status implementation-complete` succeeds.
 
 ---
 
@@ -72,7 +72,7 @@ If the branch is `main` (or `master`), skip to **Path D: Main branch**.
 >
 > **Suggested next steps:**
 >
-> 1. `aigon agent-status submitted` — mark implementation complete and signal ready for review
+> 1. `aigon agent-status implementation-complete` — mark implementation complete and signal ready for review
 > 2. `/aigon:feature-do <ID>` — continue implementing if not yet done
 
 #### B3: Worktree branch (agent code present), any state
@@ -80,7 +80,7 @@ If the branch is `main` (or `master`), skip to **Path D: Main branch**.
 > You are in a Fleet worktree (`<branch>`). `feature-do` runs automatically on worktree open — do not suggest it.
 >
 > **Suggested next step:**
-> `aigon agent-status submitted` — once your implementation and log updates are complete
+> `aigon agent-status implementation-complete` — once your implementation and log updates are complete
 
 ---
 

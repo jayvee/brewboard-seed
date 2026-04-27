@@ -162,20 +162,31 @@ aigon feature-create "feature-name"
 
 After creating each feature, edit the spec to add:
 
-1. Research origin backlink:
+1. **`research:` frontmatter field** (REQUIRED — stamps a structured link from feature → research):
+
+```yaml
+---
+complexity: medium
+research: {{args}}
+---
+```
+
+The dashboard reads this field to populate the FEATURES sub-tab inside the research detail panel. Use the numeric research ID from this command's argument; do not invent or quote it.
+
+2. Research origin backlink in the body:
 ```markdown
 ## Related
 - Research: #{ID} {research-name}
 ```
 
-2. For features that depend on another feature in this set, add `depends_on` to the **Dependencies** section:
+3. For features that depend on another feature in this set, add `depends_on` to the **Dependencies** section:
 ```markdown
 ## Dependencies
 - depends_on: prefix-1-name
 ```
 This enables Aigon’s dependency system to enforce ordering — dependent features cannot be started until their dependencies are done. Every feature that has a predecessor **must** have this field; omitting it is a mistake.
 
-3. After all specs are edited, **immediately prioritise every feature in the set in dependency order** (roots first, leaves last). This assigns numeric IDs in execution order, so the board reflects the correct sequence at a glance.
+4. After all specs are edited, **immediately prioritise every feature in the set in dependency order** (roots first, leaves last). This assigns numeric IDs in execution order, so the board reflects the correct sequence at a glance.
 
 ```bash
 aigon feature-prioritise "prefix-1-name"   # root — no deps
@@ -235,7 +246,7 @@ Then tell the user:
 
 > "Evaluation complete. Selected features have been created with research backlinks. Run `/aigon:research-close {ID}` when ready."
 
-Do **not** run `aigon agent-status submitted` — that signal is for the per-agent findings phase (`03-in-progress`). Closing out the evaluation is a user decision; they run `research-close` when they're satisfied with the output.
+Do **not** run `aigon agent-status research-complete` — that signal is for the per-agent findings phase (`03-in-progress`). Closing out the evaluation is a user decision; they run `research-close` when they're satisfied with the output.
 
 **STAY in the session.** The user may want to review the evaluation or ask for changes.
 
@@ -246,5 +257,6 @@ Do **not** run `aigon agent-status submitted` — that signal is for the per-age
 - Wait for user confirmation before updating files or creating features
 - Use the exact table format so output is clean and actionable
 - Created features must include a research origin backlink
+- Every created feature spec MUST have `research: {{args}}` in its frontmatter — this is what powers the dashboard FEATURES sub-tab
 
 ARGUMENTS: {{args}}

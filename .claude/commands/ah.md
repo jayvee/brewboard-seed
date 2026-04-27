@@ -61,8 +61,8 @@ description: Show Aigon commands (shortcut for help)
 | gg | Gemini | `gemini --yolo` | Auto-approves all |
 | cx | Codex | `codex` | Workspace-write, smart approval |
 | cu | Cursor | `agent --print --force --trust --output-format stream-json` | Auto-approves commands (yolo mode) |
-| op | OpenCode | `opencode run` | run |
-| km | Kimi Code CLI | `kimi --print` | --print |
+| op | OpenCode | `opencode` | Workspace-write, smart approval |
+| km | Kimi Code CLI | `kimi --yolo` | Auto-approves all |
 
 **Quick-allow when prompted:** Claude `Shift+Tab` • Gemini `2` for always • Cursor "Add to allowlist" • Codex "Allow and remember"
 
