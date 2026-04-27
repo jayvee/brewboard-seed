@@ -38,6 +38,9 @@
   "devProxy": {
     "basePort": 4200
   },
+  "devServer": {
+    "enabled": false
+  },
   "instructions": {
     "rigor": "light"
   }
