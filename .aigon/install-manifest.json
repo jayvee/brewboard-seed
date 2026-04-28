@@ -54,7 +54,7 @@
       "path": ".agents/skills/aigon-board/SKILL.md",
       "sha256": "685002ee47bc40502651cfbc8cbeec78420aa2fc694284f726ae3bddf34dbb80",
       "version": "2.61.0",
-      "installedAt": "2026-04-28T06:46:56.222Z"
+      "installedAt": "2026-04-28T09:37:29.746Z"
     },
     {
       "path": ".agents/skills/aigon-dev-server/SKILL.md",
@@ -78,7 +78,7 @@
       "path": ".agents/skills/aigon-feature-close/SKILL.md",
       "sha256": "f5cd1dba7dc4fb5ccc562b143c4f53d843191380a503a69ea356d4d4e7ecfbd4",
       "version": "2.61.0",
-      "installedAt": "2026-04-28T06:46:56.222Z"
+      "installedAt": "2026-04-28T09:37:29.746Z"
     },
     {
       "path": ".agents/skills/aigon-feature-code-review/SKILL.md",
@@ -90,25 +90,25 @@
       "path": ".agents/skills/aigon-feature-code-revise/SKILL.md",
       "sha256": "2cb20d56dfcc16408f917c93f2aab71085e816a10efdea62cf7b204b22fa30b5",
       "version": "2.61.0",
-      "installedAt": "2026-04-28T06:46:56.222Z"
+      "installedAt": "2026-04-28T09:37:29.747Z"
     },
     {
       "path": ".agents/skills/aigon-feature-create/SKILL.md",
       "sha256": "52bf4b9a9894500275d251c9435d53573d19ac60f1ff60de43bd30fff9c6024b",
       "version": "2.61.0",
-      "installedAt": "2026-04-28T06:46:56.222Z"
+      "installedAt": "2026-04-28T09:37:29.747Z"
     },
     {
       "path": ".agents/skills/aigon-feature-do/SKILL.md",
       "sha256": "a9e421b6a3e3c032057f968dc3c1bf17ce9644b80acf710f6f4c0e42af668a74",
       "version": "2.61.0",
-      "installedAt": "2026-04-28T06:46:56.222Z"
+      "installedAt": "2026-04-28T09:37:29.747Z"
     },
     {
       "path": ".agents/skills/aigon-feature-eval/SKILL.md",
       "sha256": "cbb84745a0dcce896d3952d6c4396eabe338a15722fcd63ada0b8d155946e653",
       "version": "2.61.0",
-      "installedAt": "2026-04-28T06:46:56.222Z"
+      "installedAt": "2026-04-28T09:37:29.747Z"
     },
     {
       "path": ".agents/skills/aigon-feature-now/SKILL.md",
@@ -120,13 +120,13 @@
       "path": ".agents/skills/aigon-feature-open/SKILL.md",
       "sha256": "3a07b84728942b856645b97b8cdc76ea8ee4884c922d2a160ec05b179d79f926",
       "version": "2.61.0",
-      "installedAt": "2026-04-28T06:46:56.222Z"
+      "installedAt": "2026-04-28T09:37:29.747Z"
     },
     {
       "path": ".agents/skills/aigon-feature-prioritise/SKILL.md",
       "sha256": "331ac57bb7a773d08bca77769bbea6758c49d436df7c57b975f12ca0a9ed42f3",
       "version": "2.61.0",
-      "installedAt": "2026-04-28T06:46:56.222Z"
+      "installedAt": "2026-04-28T09:37:29.747Z"
     },
     {
       "path": ".agents/skills/aigon-feature-push/SKILL.md",
@@ -144,13 +144,13 @@
       "path": ".agents/skills/aigon-feature-review/SKILL.md",
       "sha256": "b6aeeea2d0604f5941055851a815db9209d3aa5b2624c70ac1970f3e086fb777",
       "version": "2.61.0",
-      "installedAt": "2026-04-28T06:46:56.222Z"
+      "installedAt": "2026-04-28T09:37:29.748Z"
     },
     {
       "path": ".agents/skills/aigon-feature-spec-review/SKILL.md",
       "sha256": "ab0ade0abcc82e2c9497e1c4f4d95f37e6c573e90763e0e63a1d4be9af43ce64",
       "version": "2.61.0",
-      "installedAt": "2026-04-28T06:46:56.222Z"
+      "installedAt": "2026-04-28T09:37:29.748Z"
     },
     {
       "path": ".agents/skills/aigon-feature-spec-revise/SKILL.md",
@@ -162,7 +162,7 @@
       "path": ".agents/skills/aigon-feature-start/SKILL.md",
       "sha256": "023929007462261693a4b32e49deb555a98981f66c0eb05cdd0fec1e362590aa",
       "version": "2.61.0",
-      "installedAt": "2026-04-28T06:46:56.222Z"
+      "installedAt": "2026-04-28T09:37:29.748Z"
     },
     {
       "path": ".agents/skills/aigon-feature-transfer/SKILL.md",
@@ -198,19 +198,19 @@
       "path": ".agents/skills/aigon-help/SKILL.md",
       "sha256": "6ce6590ebe91f5cbd5b2a2c03bd46046c8c7ec5f9e643ffff2545a2f218334a8",
       "version": "2.61.0",
-      "installedAt": "2026-04-28T06:46:56.222Z"
+      "installedAt": "2026-04-28T09:37:29.749Z"
     },
     {
       "path": ".agents/skills/aigon-next/SKILL.md",
       "sha256": "6762b8940a60808f98035c292b306dbbba7ba2907e799755cb3fffaf3be0cde1",
       "version": "2.61.0",
-      "installedAt": "2026-04-28T06:46:56.222Z"
+      "installedAt": "2026-04-28T09:37:29.749Z"
     },
     {
       "path": ".agents/skills/aigon-research-autopilot/SKILL.md",
       "sha256": "3ee91fdf4a4bc78a248219f137e2ddf516f10d2d5d241c2ea71d5f21e297d770",
       "version": "2.61.0",
-      "installedAt": "2026-04-28T06:46:56.222Z"
+      "installedAt": "2026-04-28T09:37:29.749Z"
     },
     {
       "path": ".agents/skills/aigon-research-close/SKILL.md",
@@ -222,13 +222,13 @@
       "path": ".agents/skills/aigon-research-create/SKILL.md",
       "sha256": "9de791e07008b4d4558f5a85a73f56f492d422044d8577e27b274739af950afd",
       "version": "2.61.0",
-      "installedAt": "2026-04-28T06:46:56.222Z"
+      "installedAt": "2026-04-28T09:37:29.749Z"
     },
     {
       "path": ".agents/skills/aigon-research-do/SKILL.md",
       "sha256": "2a9438ccac09004ce340fc49dd58d4101fcb25f2da573d608f68f5d1a00194a1",
       "version": "2.61.0",
-      "installedAt": "2026-04-28T06:46:56.222Z"
+      "installedAt": "2026-04-28T09:37:29.759Z"
     },
     {
       "path": ".agents/skills/aigon-research-eval/SKILL.md",
@@ -240,13 +240,13 @@
       "path": ".agents/skills/aigon-research-open/SKILL.md",
       "sha256": "ebb3b980c7bed316ce16e03efeba0f8f13ad9c9525bec820d5e3989d95c03e33",
       "version": "2.61.0",
-      "installedAt": "2026-04-28T06:46:56.222Z"
+      "installedAt": "2026-04-28T09:37:29.749Z"
     },
     {
       "path": ".agents/skills/aigon-research-prioritise/SKILL.md",
       "sha256": "032e0b648d42927cbe135456af8bda7902e6930bccad6f03edcbd3eba9538235",
       "version": "2.61.0",
-      "installedAt": "2026-04-28T06:46:56.222Z"
+      "installedAt": "2026-04-28T09:37:29.749Z"
     },
     {
       "path": ".agents/skills/aigon-research-reset/SKILL.md",
@@ -258,7 +258,7 @@
       "path": ".agents/skills/aigon-research-spec-review/SKILL.md",
       "sha256": "e3db3e409fe64ace7abab5357475c0ddbe37488abcdc2dd34f75cc530451861c",
       "version": "2.61.0",
-      "installedAt": "2026-04-28T06:46:56.222Z"
+      "installedAt": "2026-04-28T09:37:29.750Z"
     },
     {
       "path": ".agents/skills/aigon-research-spec-revise/SKILL.md",
@@ -270,7 +270,7 @@
       "path": ".agents/skills/aigon-research-start/SKILL.md",
       "sha256": "d14fd61b4ec2245bada22f334d36071aca1b8e63f22f4bf7484c928e93afe5f9",
       "version": "2.61.0",
-      "installedAt": "2026-04-28T06:46:56.222Z"
+      "installedAt": "2026-04-28T09:37:29.750Z"
     },
     {
       "path": ".agents/skills/aigon-research-unprioritise/SKILL.md",
@@ -282,13 +282,13 @@
       "path": ".agents/skills/aigon-sessions-close/SKILL.md",
       "sha256": "3910f54ea33eb55a8ed62b48bd5cfcb5d9ce6e36f6946f942fc8e1b37ca4bdce",
       "version": "2.61.0",
-      "installedAt": "2026-04-28T06:46:56.222Z"
+      "installedAt": "2026-04-28T09:37:29.750Z"
     },
     {
       "path": ".agents/skills/aigon-set-prioritise/SKILL.md",
       "sha256": "fbfdedc6f8174ebe77d9f44b75ede35113b2644473db6646b10bf0fa74e6e313",
       "version": "2.61.0",
-      "installedAt": "2026-04-28T06:46:56.222Z"
+      "installedAt": "2026-04-28T09:37:29.750Z"
     },
     {
       "path": ".claude/commands/aigon/board.md",
