@@ -1,3 +1,5 @@
+'use client';
+import { useState } from 'react';
 import { BeerCard } from '@/components/BeerCard';
 
 const BEERS = [
@@ -10,14 +12,40 @@ const BEERS = [
 ];
 
 export default function Home() {
+  const [minRating, setMinRating] = useState(0);
+
+  const filtered = BEERS.filter(beer => beer.rating >= minRating);
+
   return (
     <main className="max-w-4xl mx-auto p-8">
       <header className="mb-8">
         <h1 className="text-4xl font-bold text-stone-900">BrewBoard</h1>
         <p className="text-stone-500 mt-2">Your craft beer collection</p>
       </header>
+
+      <div className="mb-6 flex gap-2 items-center">
+        <span className="text-sm text-stone-500">Min rating:</span>
+        {[0, 3.5, 4.0, 4.5].map(threshold => (
+          <button
+            key={threshold}
+            onClick={() => setMinRating(threshold)}
+            style={{ fontWeight: minRating === threshold ? 700 : 400 }}
+            className={`px-3 py-1 text-sm rounded-full border transition-colors ${
+              minRating === threshold
+                ? 'bg-amber-500 text-white border-amber-500'
+                : 'bg-white text-stone-600 border-stone-300 hover:border-amber-400'
+            }`}
+          >
+            {threshold === 0 ? 'All' : `${threshold}★+`}
+          </button>
+        ))}
+        <span style={{ color: '#78716c', fontSize: '13px' }}>
+          {filtered.length} of {BEERS.length}
+        </span>
+      </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {BEERS.map(beer => (
+        {filtered.map(beer => (
           <BeerCard key={beer.id} {...beer} />
         ))}
       </div>
