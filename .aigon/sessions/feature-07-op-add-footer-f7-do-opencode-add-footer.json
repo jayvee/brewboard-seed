@@ -1,0 +1,13 @@
+{
+  "category": "entity",
+  "sessionName": "feature-07-op-add-footer-f7-do-opencode-add-footer",
+  "repoPath": "/Users/jviner/.aigon/worktrees/brewboard/feature-07-opencode-add-footer",
+  "worktreePath": "/Users/jviner/.aigon/worktrees/brewboard/feature-07-opencode-add-footer",
+  "createdAt": "2026-04-28T05:07:00.474Z",
+  "agent": "opencode",
+  "tmuxId": "$1824",
+  "shellPid": 30489,
+  "entityType": "f",
+  "entityId": "7",
+  "role": "do"
+}
