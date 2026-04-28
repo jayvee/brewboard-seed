@@ -8,6 +8,11 @@ This is a test/demo repo — do NOT write tests. No unit tests, no integration t
 
 Use `aigon dev-server start` for port-managed startup.
 
+## Commands
+
+To validate an agent with the brewboard smoke test, run:
+`aigon feature-start 01 <id>`
+
 ## Dependencies
 
 `npm install` in the project root.
