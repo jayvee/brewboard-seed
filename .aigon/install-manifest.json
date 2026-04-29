@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "aigonVersion": "2.61.0",
+  "aigonVersion": "2.62.0",
   "files": [
     {
       "path": ".aigon/docs/agents/claude.md",
@@ -53,8 +53,8 @@
     {
       "path": ".agents/skills/aigon-board/SKILL.md",
       "sha256": "685002ee47bc40502651cfbc8cbeec78420aa2fc694284f726ae3bddf34dbb80",
-      "version": "2.61.0",
-      "installedAt": "2026-04-28T09:58:33.675Z"
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.699Z"
     },
     {
       "path": ".agents/skills/aigon-dev-server/SKILL.md",
@@ -77,8 +77,8 @@
     {
       "path": ".agents/skills/aigon-feature-close/SKILL.md",
       "sha256": "f5cd1dba7dc4fb5ccc562b143c4f53d843191380a503a69ea356d4d4e7ecfbd4",
-      "version": "2.61.0",
-      "installedAt": "2026-04-28T09:58:33.676Z"
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.700Z"
     },
     {
       "path": ".agents/skills/aigon-feature-code-review/SKILL.md",
@@ -89,26 +89,26 @@
     {
       "path": ".agents/skills/aigon-feature-code-revise/SKILL.md",
       "sha256": "2cb20d56dfcc16408f917c93f2aab71085e816a10efdea62cf7b204b22fa30b5",
-      "version": "2.61.0",
-      "installedAt": "2026-04-28T09:58:33.676Z"
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.700Z"
     },
     {
       "path": ".agents/skills/aigon-feature-create/SKILL.md",
       "sha256": "52bf4b9a9894500275d251c9435d53573d19ac60f1ff60de43bd30fff9c6024b",
-      "version": "2.61.0",
-      "installedAt": "2026-04-28T09:58:33.676Z"
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.701Z"
     },
     {
       "path": ".agents/skills/aigon-feature-do/SKILL.md",
       "sha256": "a9e421b6a3e3c032057f968dc3c1bf17ce9644b80acf710f6f4c0e42af668a74",
-      "version": "2.61.0",
-      "installedAt": "2026-04-28T09:58:33.676Z"
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.701Z"
     },
     {
       "path": ".agents/skills/aigon-feature-eval/SKILL.md",
       "sha256": "cbb84745a0dcce896d3952d6c4396eabe338a15722fcd63ada0b8d155946e653",
-      "version": "2.61.0",
-      "installedAt": "2026-04-28T09:58:33.677Z"
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.701Z"
     },
     {
       "path": ".agents/skills/aigon-feature-now/SKILL.md",
@@ -119,14 +119,14 @@
     {
       "path": ".agents/skills/aigon-feature-open/SKILL.md",
       "sha256": "3a07b84728942b856645b97b8cdc76ea8ee4884c922d2a160ec05b179d79f926",
-      "version": "2.61.0",
-      "installedAt": "2026-04-28T09:58:33.677Z"
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.701Z"
     },
     {
       "path": ".agents/skills/aigon-feature-prioritise/SKILL.md",
       "sha256": "331ac57bb7a773d08bca77769bbea6758c49d436df7c57b975f12ca0a9ed42f3",
-      "version": "2.61.0",
-      "installedAt": "2026-04-28T09:58:33.677Z"
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.701Z"
     },
     {
       "path": ".agents/skills/aigon-feature-push/SKILL.md",
@@ -143,14 +143,14 @@
     {
       "path": ".agents/skills/aigon-feature-review/SKILL.md",
       "sha256": "b6aeeea2d0604f5941055851a815db9209d3aa5b2624c70ac1970f3e086fb777",
-      "version": "2.61.0",
-      "installedAt": "2026-04-28T09:58:33.677Z"
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.702Z"
     },
     {
       "path": ".agents/skills/aigon-feature-spec-review/SKILL.md",
       "sha256": "ab0ade0abcc82e2c9497e1c4f4d95f37e6c573e90763e0e63a1d4be9af43ce64",
-      "version": "2.61.0",
-      "installedAt": "2026-04-28T09:58:33.677Z"
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.702Z"
     },
     {
       "path": ".agents/skills/aigon-feature-spec-revise/SKILL.md",
@@ -161,8 +161,8 @@
     {
       "path": ".agents/skills/aigon-feature-start/SKILL.md",
       "sha256": "023929007462261693a4b32e49deb555a98981f66c0eb05cdd0fec1e362590aa",
-      "version": "2.61.0",
-      "installedAt": "2026-04-28T09:58:33.678Z"
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.702Z"
     },
     {
       "path": ".agents/skills/aigon-feature-transfer/SKILL.md",
@@ -197,20 +197,20 @@
     {
       "path": ".agents/skills/aigon-help/SKILL.md",
       "sha256": "6ce6590ebe91f5cbd5b2a2c03bd46046c8c7ec5f9e643ffff2545a2f218334a8",
-      "version": "2.61.0",
-      "installedAt": "2026-04-28T09:58:33.678Z"
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.703Z"
     },
     {
       "path": ".agents/skills/aigon-next/SKILL.md",
       "sha256": "6762b8940a60808f98035c292b306dbbba7ba2907e799755cb3fffaf3be0cde1",
-      "version": "2.61.0",
-      "installedAt": "2026-04-28T09:58:33.678Z"
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.703Z"
     },
     {
       "path": ".agents/skills/aigon-research-autopilot/SKILL.md",
       "sha256": "3ee91fdf4a4bc78a248219f137e2ddf516f10d2d5d241c2ea71d5f21e297d770",
-      "version": "2.61.0",
-      "installedAt": "2026-04-28T09:58:33.678Z"
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.703Z"
     },
     {
       "path": ".agents/skills/aigon-research-close/SKILL.md",
@@ -221,14 +221,14 @@
     {
       "path": ".agents/skills/aigon-research-create/SKILL.md",
       "sha256": "9de791e07008b4d4558f5a85a73f56f492d422044d8577e27b274739af950afd",
-      "version": "2.61.0",
-      "installedAt": "2026-04-28T09:58:33.678Z"
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.704Z"
     },
     {
       "path": ".agents/skills/aigon-research-do/SKILL.md",
       "sha256": "2a9438ccac09004ce340fc49dd58d4101fcb25f2da573d608f68f5d1a00194a1",
-      "version": "2.61.0",
-      "installedAt": "2026-04-28T09:58:33.687Z"
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.717Z"
     },
     {
       "path": ".agents/skills/aigon-research-eval/SKILL.md",
@@ -239,14 +239,14 @@
     {
       "path": ".agents/skills/aigon-research-open/SKILL.md",
       "sha256": "ebb3b980c7bed316ce16e03efeba0f8f13ad9c9525bec820d5e3989d95c03e33",
-      "version": "2.61.0",
-      "installedAt": "2026-04-28T09:58:33.679Z"
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.704Z"
     },
     {
       "path": ".agents/skills/aigon-research-prioritise/SKILL.md",
       "sha256": "032e0b648d42927cbe135456af8bda7902e6930bccad6f03edcbd3eba9538235",
-      "version": "2.61.0",
-      "installedAt": "2026-04-28T09:58:33.679Z"
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.704Z"
     },
     {
       "path": ".agents/skills/aigon-research-reset/SKILL.md",
@@ -257,8 +257,8 @@
     {
       "path": ".agents/skills/aigon-research-spec-review/SKILL.md",
       "sha256": "e3db3e409fe64ace7abab5357475c0ddbe37488abcdc2dd34f75cc530451861c",
-      "version": "2.61.0",
-      "installedAt": "2026-04-28T09:58:33.679Z"
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.705Z"
     },
     {
       "path": ".agents/skills/aigon-research-spec-revise/SKILL.md",
@@ -269,8 +269,8 @@
     {
       "path": ".agents/skills/aigon-research-start/SKILL.md",
       "sha256": "d14fd61b4ec2245bada22f334d36071aca1b8e63f22f4bf7484c928e93afe5f9",
-      "version": "2.61.0",
-      "installedAt": "2026-04-28T09:58:33.679Z"
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.705Z"
     },
     {
       "path": ".agents/skills/aigon-research-unprioritise/SKILL.md",
@@ -281,14 +281,14 @@
     {
       "path": ".agents/skills/aigon-sessions-close/SKILL.md",
       "sha256": "3910f54ea33eb55a8ed62b48bd5cfcb5d9ce6e36f6946f942fc8e1b37ca4bdce",
-      "version": "2.61.0",
-      "installedAt": "2026-04-28T09:58:33.680Z"
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.705Z"
     },
     {
       "path": ".agents/skills/aigon-set-prioritise/SKILL.md",
       "sha256": "fbfdedc6f8174ebe77d9f44b75ede35113b2644473db6646b10bf0fa74e6e313",
-      "version": "2.61.0",
-      "installedAt": "2026-04-28T09:58:33.680Z"
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.705Z"
     },
     {
       "path": ".claude/commands/aigon/board.md",
@@ -1231,6 +1231,438 @@
       "sha256": "d3dce07b4407804f05ae829b821b887d6e657b5142ed29a6ed0da06d49a1f0f8",
       "version": "2.61.0",
       "installedAt": "2026-04-28T06:46:56.222Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-board.md",
+      "sha256": "2765f4dede5ad28c7a8c390bf7681da7b1af9a1b135317c40062aa5c70fbffa5",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.688Z"
+    },
+    {
+      "path": ".opencode/aigon-ab.md",
+      "sha256": "7368a71f23ef4a9cb51c316e44f9dda80d3e8e139358532c262de093fd7a52fc",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.688Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-dev-server.md",
+      "sha256": "e4ac0e73834f65567ab08638b8e7e203a657165035f3e47154c58af3e97b9d38",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.688Z"
+    },
+    {
+      "path": ".opencode/aigon-ads.md",
+      "sha256": "bc0bc3e6f9f9f01eede898964c171b74fb2a4ed5f93ec591484f45f6c0cdffd5",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.688Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-feature-autonomous-start.md",
+      "sha256": "290a1ea21ae77087ff7347b169e98635d5f7e4e174c29535d6a17b626ad3f9bc",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.688Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-feature-cleanup.md",
+      "sha256": "7304594cb083148e2a1fa09119acc95d66dce349b2aebe40fb3d3dd434bb8892",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.688Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-feature-close.md",
+      "sha256": "fbe565c303a832607ec43f73bd458983f3e9d646ce6b3892480a3458ebfd3a9c",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.689Z"
+    },
+    {
+      "path": ".opencode/aigon-afcl.md",
+      "sha256": "36df241f4a0fc1580dccfa9fe69aa82f68a3e4f760e2b4c46ac4a6aedf4af49e",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.689Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-feature-code-review.md",
+      "sha256": "f3699d0af98ec61639acca75d1224758e36a5101758500d6ee1ef5602925929b",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.689Z"
+    },
+    {
+      "path": ".opencode/aigon-afr.md",
+      "sha256": "66b76230b32535377d5858087fed85a33b6d353b314f5a8fabda551653bafe06",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.689Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-feature-code-revise.md",
+      "sha256": "fff4bfe1838c67281d9cf82143a6250f6e0436138d9456267b34f3c061cb599d",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.689Z"
+    },
+    {
+      "path": ".opencode/aigon-afrv.md",
+      "sha256": "361f015c29be2e1940f6e48fbf4555525843f116588b9fc5857c61c230d74cd7",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.689Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-feature-create.md",
+      "sha256": "3e87a48baa94a1a8f3228a1744881236d649f2408c99461adb5897c1f587bd0c",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.690Z"
+    },
+    {
+      "path": ".opencode/aigon-afc.md",
+      "sha256": "23d38e5714d4725e390e91ed210096e6beee3d921239b309c8b3a0e6c8f564bb",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.690Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-feature-do.md",
+      "sha256": "445fe4352282281b06fe8facf871d419e4357e301df430720d56c7aa8e6d0d99",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.690Z"
+    },
+    {
+      "path": ".opencode/aigon-afd.md",
+      "sha256": "5ab525824d2be8216fecf7604d8690961e68ed85848d5012341e51c848d3e903",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.691Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-feature-eval.md",
+      "sha256": "b0eff110ae84cbaaa3bd083a0b979aae141287334cdc8d53d538714bb9d962a2",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.691Z"
+    },
+    {
+      "path": ".opencode/aigon-afe.md",
+      "sha256": "0119a0a366085f42c462a8db861e53b260948073a775c337db6591417ec8e247",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.691Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-feature-now.md",
+      "sha256": "a3d72e558228e180f00b2d90e444c683cd1c660522b5f1012feeffdd2c05e9f5",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.691Z"
+    },
+    {
+      "path": ".opencode/aigon-afn.md",
+      "sha256": "7b152dfa917f8b793ef6a8238d55fa86b8a1e23bd0aeb44a047209bbca18a11e",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.691Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-feature-open.md",
+      "sha256": "a20a82c2e1401b105266c9f9441b4ed953e4e485cb627057487e7573ced8701b",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.691Z"
+    },
+    {
+      "path": ".opencode/aigon-afo.md",
+      "sha256": "e06fd37f087d788d864e8f9656a52a667eaee613f820d1dca66427b6138a587a",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.691Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-feature-prioritise.md",
+      "sha256": "c2e38467c9593f65538735507dee499a9927d9c09d38f9c7e7bd6c654dc421a0",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.691Z"
+    },
+    {
+      "path": ".opencode/aigon-afp.md",
+      "sha256": "02b972e553c2c989f1bb2ceefd5ece1ed1b833f9fa7935feabfe609b27b5a6ac",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.691Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-feature-push.md",
+      "sha256": "435bb2f631b3778c3390e12eed46f9902f04387ab299c71a8036e9eb54f7eb7b",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.692Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-feature-reset.md",
+      "sha256": "a2e989695fda3a46d997c8cc7ad5dcbca9b0a5be1c9a3eaadb591d9bdbdad558",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.692Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-feature-review.md",
+      "sha256": "dcea3a31efc65faddb7fe1710134f139b4e6d29b39590b42dc98deb39d1b6905",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.692Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-feature-spec-review.md",
+      "sha256": "a66416cd123972c9644cd350cf002321b267d71f2cd35e72a0a136dbf5e2fa30",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.692Z"
+    },
+    {
+      "path": ".opencode/aigon-afsr.md",
+      "sha256": "b48ab7f7e423611e762e68715a546edefdf5703d2b68370fdc4a00c17a138199",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.692Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-feature-spec-revise.md",
+      "sha256": "8866821ead8bff575fa6be69a6a625f3823f7e59c15730600b42150d5b1862fb",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.692Z"
+    },
+    {
+      "path": ".opencode/aigon-afsrv.md",
+      "sha256": "8e260e93550c1c7a3c0509cbf036f133e1377f1767b39d77e6165a133a9365a6",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.692Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-feature-start.md",
+      "sha256": "a607d5cad7b66cdfac2399e3f35c44e553e1d1d842f4752771458f9561a71b30",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.692Z"
+    },
+    {
+      "path": ".opencode/aigon-afs.md",
+      "sha256": "946d0da23e0f90a75cc5506b510af547079329aca1c813f0b8cc075ab51b51a5",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.693Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-feature-transfer.md",
+      "sha256": "d0bebdd680cb51651ede125f6a0bf2c67dcaf00b84a1444936a9521f1cbb35cb",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.693Z"
+    },
+    {
+      "path": ".opencode/aigon-aft.md",
+      "sha256": "5747ec09269b3245eef260ce2c0d2a095efb4922a86be4040d95e066abc19d12",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.693Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-feature-unprioritise.md",
+      "sha256": "2ddfd0744bd8575ac6db3711c7c2b9e4fd2b7beacba2c5f73b4f22c686ce256f",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.693Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-feedback-create.md",
+      "sha256": "2a651df93facbca2fed7726553a2c2e7e61bb38415d19d6329150ebb36d11c89",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.693Z"
+    },
+    {
+      "path": ".opencode/aigon-afbc.md",
+      "sha256": "31bef8346671a02e6c8f5a94b0808312fc00d5c63457d977df39fba8805afae1",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.693Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-feedback-list.md",
+      "sha256": "d6c8091bc061b1e784611657d90aa77d058a0f4d1cd116c88ab415fa29663d73",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.693Z"
+    },
+    {
+      "path": ".opencode/aigon-afbl.md",
+      "sha256": "f66759c3a5e3c74d47db43143dd71769e5509fb5bda21f3fcbbfc7c5d057021c",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.693Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-feedback-triage.md",
+      "sha256": "d5d9ee3e57df42cf2b0fa2cfd8907935bdf0b1c7025cc05c9b961f76384ef3f4",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.694Z"
+    },
+    {
+      "path": ".opencode/aigon-afbt.md",
+      "sha256": "9a179baf7bdfeb502b9361e94371f3d1783c449b16ead2b10921ddcb54503239",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.694Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-help.md",
+      "sha256": "81917db5aa58fb05a4c97f34501c3178d0bbc7036a468d4e72d1125fdd377531",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.694Z"
+    },
+    {
+      "path": ".opencode/aigon-ah.md",
+      "sha256": "830f5c7db181e955bea907c85de07f9091c22ea727e4e0b2ccec387d61fe8a9f",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.694Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-next.md",
+      "sha256": "cf98dc4ba248eaae7d7874159b564c01884f3173c3456bf5eab9665fcc0d50f9",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.694Z"
+    },
+    {
+      "path": ".opencode/aigon-an.md",
+      "sha256": "b5417487144b5043724ee492770f80662402823301a19c17c16f3ca8aa90e42c",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.695Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-research-autopilot.md",
+      "sha256": "e2e9793ce6f849b03cac7b65579bae37590d07c755c7be8504e79ae26377ccca",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.695Z"
+    },
+    {
+      "path": ".opencode/aigon-arap.md",
+      "sha256": "6b062f586c49dfe2d43d32c718dd7f442ad19b2f69561aa5311d35e5c5364489",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.695Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-research-close.md",
+      "sha256": "dcffb4cd454decfa1e7efceefd7e2c8a079f86b0870195c51c4125a808760b7c",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.695Z"
+    },
+    {
+      "path": ".opencode/aigon-arcl.md",
+      "sha256": "182e16c15d9b21c26fe3ebf951ec2da61d9e53be809380f156a3584e0eddcaad",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.695Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-research-create.md",
+      "sha256": "0e4c5ab9d1526b112510fa0a13aa82e0915e651777f270c67287d44c09df3dc5",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.695Z"
+    },
+    {
+      "path": ".opencode/aigon-arc.md",
+      "sha256": "666506a925ec65d57845d227723dcf381402ed20d05b6d62f73d77ad4661f442",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.695Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-research-do.md",
+      "sha256": "591b3ef061e29b273891de1592fc3f6749aebef9c1b15a0e4b78fe865d50b83e",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.695Z"
+    },
+    {
+      "path": ".opencode/aigon-ard.md",
+      "sha256": "bfbe3546e423d1aa3fc55aa4d51a899d28b0d312e2d0ed06f0d111ed028e5399",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.696Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-research-eval.md",
+      "sha256": "f0a90e7c842713e93032a18568d01ddd0a49981b1d8156310862641d8965cc60",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.696Z"
+    },
+    {
+      "path": ".opencode/aigon-are.md",
+      "sha256": "ee8785ae8c81f0ed77d8783e9009ad189d50b69acc4fd01301a194db851e4632",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.696Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-research-open.md",
+      "sha256": "6dc02dab5df79c9fbcfd83091df9d257ea76884d9ed2a89fb34b4bda9967e31c",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.696Z"
+    },
+    {
+      "path": ".opencode/aigon-aro.md",
+      "sha256": "b963d359fcc4f71c0e6ecd71c42beca270ded038fcb073713e0b3c44a1353c5a",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.696Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-research-prioritise.md",
+      "sha256": "7e3d33dcaa0d3c152a721be9ad2949da9deaccfe7a98356833b0cc8a8f849a3b",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.696Z"
+    },
+    {
+      "path": ".opencode/aigon-arp.md",
+      "sha256": "0a26ee4f170c2689111c3d1f8a5fe62545326ed093fbca460702d112150fa453",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.696Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-research-reset.md",
+      "sha256": "ff05426fe20594b6d3c5aaf5b75dfa53f9b1ae31cfe70489deb27cec62f5f13c",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.696Z"
+    },
+    {
+      "path": ".opencode/aigon-arr.md",
+      "sha256": "aa7d03ab0bdaa7b0ff4476fac247dcb56d647b56fa67f7e0f2f0dd2724c16cf1",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.696Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-research-spec-review.md",
+      "sha256": "497fd4f687f5514da88abd46c0c1c6b3b7ac4413de9518dd7426abce806433b7",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.697Z"
+    },
+    {
+      "path": ".opencode/aigon-arsr.md",
+      "sha256": "b059e3136404a0e5d108cb6bb72e402dbf07d6795b26bd8a64b34e7669c54de7",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.697Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-research-spec-revise.md",
+      "sha256": "27878e44497e5a0bc401e4e8ee954a70d01a100967e07caa594b78c157209a77",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.697Z"
+    },
+    {
+      "path": ".opencode/aigon-arsrv.md",
+      "sha256": "0e147676834e8c6970a76b68201aecb34ce55e55070bad983e80997146c96291",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.697Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-research-start.md",
+      "sha256": "6ad23793deea87819f32359238ad88ba0e7f2c791593c17189b95d4a1363474c",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.698Z"
+    },
+    {
+      "path": ".opencode/aigon-ars.md",
+      "sha256": "10a1b52e52c7e1f65407482bfb502c8641da77298d51f529a5d60964db74ca6e",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.698Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-research-unprioritise.md",
+      "sha256": "86f9dc3a73659a33acb087a188a065e5c048af43998998e27ded0d069dbca887",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.698Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-sessions-close.md",
+      "sha256": "8337d2dd897a11ac3411670582c34685125190bb0bd8293480d3c1f49aa872f4",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.698Z"
+    },
+    {
+      "path": ".opencode/commands/aigon-set-prioritise.md",
+      "sha256": "cc7849083c940492d26b198d5e45d378306ec311d75606e86195cfa8a5028728",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.698Z"
+    },
+    {
+      "path": ".opencode/aigon-asp.md",
+      "sha256": "11240ae14667c2d7abe227170ad5490587d7f6a951e839c87b419223e34bf418",
+      "version": "2.62.0",
+      "installedAt": "2026-04-29T04:06:46.698Z"
     }
   ]
 }
