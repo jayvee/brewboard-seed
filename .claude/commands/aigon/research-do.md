@@ -108,9 +108,8 @@ For complex research topics with multiple questions, consider creating an agent 
    ```
    If this exits non-zero because the session context wasn't detected (e.g. you're on `main`), run it with explicit args:
    ```bash
-   aigon agent-status research-complete <ID> cc
+   aigon agent-status research-complete {{args}} cc
    ```
-   Replace `<ID>` with the numeric research ID (e.g. `36`).
 
    The command **must exit 0** before you can claim your research is complete.
 
