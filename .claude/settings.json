@@ -56,8 +56,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/bin/zsh -l -c \"aigon check-version\"",
-            "timeout": 30
+            "command": "/bin/zsh -l -c \"aigon check-version --notice-only\"",
+            "timeout": 15
           },
           {
             "type": "command",

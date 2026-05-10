@@ -7,8 +7,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/bin/zsh -l -c \"aigon check-version --json\"",
-            "timeout": 30000
+            "command": "/bin/zsh -l -c \"aigon check-version --notice-only\"",
+            "timeout": 15
           },
           {
             "type": "command",
