@@ -45,5 +45,6 @@ Worktrees are created in `../<repo>-worktrees/` to keep them grouped with the pr
 ## Prompt Suggestion
 
 End your response with the next command on its own line:
-- **Drive / Drive worktree:** `/aigon:feature-close <ID>`
+- **Drive (branch, solo):** `/aigon:feature-do <ID>`
+- **Drive worktree:** `/aigon:feature-close <ID>` (agent is already running in its terminal)
 - **Fleet:** `/aigon:feature-eval <ID>`
