@@ -67,5 +67,8 @@
   },
   "instructions": {
     "rigor": "light"
+  },
+  "github": {
+    "prCheck": false
   }
 }
