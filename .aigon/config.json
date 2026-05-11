@@ -1,10 +1,34 @@
 {
   "agents": {
     "cc": {
-      "models": {}
+      "models": {},
+      "research": {
+        "model": "haiku"
+      },
+      "implement": {
+        "model": "haiku"
+      },
+      "evaluate": {
+        "model": "haiku"
+      },
+      "review": {
+        "model": "haiku"
+      }
     },
     "gg": {
-      "models": {}
+      "models": {},
+      "research": {
+        "model": "gemini-2.5-flash"
+      },
+      "implement": {
+        "model": "gemini-2.5-flash"
+      },
+      "evaluate": {
+        "model": "gemini-2.5-flash"
+      },
+      "review": {
+        "model": "gemini-2.5-flash"
+      }
     },
     "cx": {
       "research": {
