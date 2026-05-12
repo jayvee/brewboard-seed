@@ -20,8 +20,6 @@ Add a function that generates a share URL for a beer review.
 
 String template building. One file, one function. Use the exact URL format shown in the acceptance criteria.
 
-Do NOT use `encodeURIComponent` or any encoding utility. Manually replace spaces with `+`, `&` with `%26`, and `=` with `%3D` using string `.replace()` calls.
-
 ## Out of Scope
 
 - Do NOT write tests
