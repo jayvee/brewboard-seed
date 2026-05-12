@@ -9,11 +9,11 @@ argument-hint: "<ID> [--agent=<agent-id>] [--iterate] [--max-iterations=N] [--au
 > aigon feature-do $1
 > ```
 > This prints the feature spec inline. Read the output, then follow the steps below.
-> Do NOT search for spec files, do NOT run `aigon --help`, do NOT run `./aigon-cli.js`. Just run the command above.
+> Do NOT search for spec files, do NOT run `aigon --help`, do NOT hunt for the `aigon` source. Just run the command above.
 
 Implement a feature. Works in Drive mode (branch), Drive worktree, and Fleet mode (competition).
 
-> **Worktree invariant:** you are already inside the correct repo. If `aigon` fails, read the error — do NOT hunt for `aigon-cli.js`.
+> **Worktree invariant:** you are already inside the correct repo. If `aigon` fails, read the error — do NOT try to introspect the tool's internals.
 
 ## Argument Resolution
 If no ID is provided or it doesn't match an active feature, run `aigon feature-list --active`, filter to matches, and ask the user which one.
@@ -71,10 +71,8 @@ aigon agent-status implementing
 - Do not create test files unless the spec explicitly requires them.
 - **COMMIT EARLY AND OFTEN.** After every meaningful change: `git add -A && git commit -m "wip: <what you just did>"`. Never more than 2 minutes of uncommitted work.
 - Use **relative paths** from the current worktree. Never absolute paths.
-- Run shell commands directly; don't delegate simple commands (`npm test`, `node -c file.js`, validation batches) to sub-agents.
-- **Do NOT run `npm run test:browser`, `npm run test:deploy`, `npm run test:ui`, or the full Playwright suite during ordinary feature work.** The iterate gate (`npm run test:quick` / `npm run test:iterate`) is your validation tool. The browser/deploy suite runs once at `feature-close` / pre-push, not mid-iteration. The `test:browser:smoke` subset runs automatically via the iterate gate when dashboard files are in the diff.
-
-**Before stopping on a policy gate (test budget, security warning, ambiguous criterion):** check the spec's `## Pre-authorised` section. If the gate matches a listed line, proceed and include a commit footer `Pre-authorised-by: <slug-of-preauth-line>` citing which line authorised it. If no line matches, stop and ask as normal.
+- Run shell commands directly; don't delegate simple commands (test runs, syntax checks, validation batches) to sub-agents.
+- **Do not run the project's full / heavy validation suite during ordinary feature work** — that's pre-push territory. Use the project's quick / scoped validation (if any) during iteration. Check the project's own docs (`AGENTS.md`, `README.md`, etc.) for which commands are which.
 
 **Scope guardrails — read before editing:**
 - Do not delete, move, or modify files unrelated to your feature spec. If existing code conflicts with your feature, document it in your log — do not remove it.

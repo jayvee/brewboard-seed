@@ -31,13 +31,13 @@ Use this understanding to write a well-informed spec — especially the **Techni
 
 ### Set the spec frontmatter
 
-**`complexity:` (required)** — drives the per-agent {model, effort} **defaults** in the dashboard start modal (resolved from each agent’s `cli.complexityDefaults[<complexity>]` in `templates/agents/<id>.json`, then `aigon config`). **Do not put model names or effort levels in the spec**; those SKUs change over time and belong only in agent templates + config.
+**`complexity:` (required)** — drives the per-agent {model, effort} **defaults** in the dashboard start modal, resolved from each agent's complexity-defaults table and then `aigon config`. **Do not put model names or effort levels in the spec**; those SKUs change over time and belong only in agent config.
 
 Use this rubric:
 
 - **low** — config tweaks, doc-only changes, single-file helpers, trivial bug fixes.
 - **medium** — standard feature with moderate cross-cutting; one command handler, small refactor, a new API route with clear shape.
-- **high** — multi-file engine edits, new event types, new dashboard surfaces, judgment-heavy deletion work, anything that requires careful reasoning about invariants.
+- **high** — multi-file changes, new public surfaces, judgment-heavy deletion work, anything that requires careful reasoning about invariants.
 - **very-high** — architectural shifts, write-path-contract changes, new workflow transitions, cross-cutting template+engine+frontend. Reserve for work where a smaller model is likely to miss load-bearing detail.
 
 **`planning_context:` (set this when you ran plan mode)** — if you entered plan mode (`EnterPlanMode` / Shift+Tab) before writing this spec and a plan file was written to `~/.claude/plans/`, set this field to that path:
