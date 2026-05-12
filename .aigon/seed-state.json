@@ -1,18 +1,3 @@
 {
-  "features": {
-    "08": {
-      "targetState": "code_review_in_progress",
-      "authorAgentId": "cc",
-      "specPath": "docs/specs/features/02-backlog/feature-08-rating-filter.md",
-      "implementation": {
-        "files": [
-          {
-            "dest": "src/app/page.tsx",
-            "source": ".aigon/seed-implementations/feature-08-page.tsx"
-          }
-        ],
-        "commitMessage": "feat: add rating filter with min-rating threshold buttons\n\nAdds a filter bar above the beer grid with four threshold buttons\n(All / 3.5+ / 4.0+ / 4.5+). Active button highlighted in amber.\nCount shows matching vs total beers."
-      }
-    }
-  }
+  "features": {}
 }
