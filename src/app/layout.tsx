@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { ThemeProvider } from '@/components/theme-provider';
-import { ThemeToggle } from '@/components/theme-toggle';
+import { ThemeProvider, ThemeToggle } from '@/components/theme-toggle';
 
 export const metadata: Metadata = {
   title: 'BrewBoard',
