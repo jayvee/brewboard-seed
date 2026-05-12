@@ -13,12 +13,12 @@ Add a function that generates a share URL for a beer review.
 ## Acceptance Criteria
 
 - [ ] Create `src/lib/share-url.ts` exporting `function buildShareUrl(beerName: string, rating: number, platform: "twitter" | "facebook"): string`
-- [ ] Twitter: return `https://twitter.com/intent/tweet?text=...` with beer name and rating
-- [ ] Facebook: return `https://www.facebook.com/sharer/sharer.php?u=...`
+- [ ] Twitter: return a URL in the form `https://twitter.com/intent/tweet?text=I+rated+{beerName}+{rating}/5+stars` with the beer name and rating substituted in
+- [ ] Facebook: return `https://www.facebook.com/sharer/sharer.php?u=https://brewboard.app`
 
 ## Technical Approach
 
-String template building. One file, one function.
+String template building. One file, one function. Use the exact URL format shown in the acceptance criteria.
 
 ## Out of Scope
 
