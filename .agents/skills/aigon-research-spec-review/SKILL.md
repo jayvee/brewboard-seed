@@ -54,7 +54,7 @@ Review the spec against this checklist. Prefer small, targeted edits over broad 
 
 ### Scope clarity
 - Remove work that belongs in a follow-up feature.
-- Flag hidden expansion of scope, especially cross-cutting dashboard or infra work.
+- Flag hidden expansion of scope, especially cross-cutting work that was not signalled in the spec.
 
 ### Understandability
 - Tighten structure so implementation order and ownership are obvious.
@@ -69,11 +69,11 @@ Review the spec against this checklist. Prefer small, targeted edits over broad 
 - Keep valid author intent.
 - Strengthen the spec without rewriting its voice unless the original wording is actively harmful or unclear.
 
-### Frontmatter: complexity (F313)
+### Frontmatter: complexity
 - Verify `complexity:` matches the spec's actual scope + risk + judgment-load using the rubric (low / medium / high / very-high).
   - **low** config/doc/single-file; **medium** standard cross-cutting; **high** multi-file engine/event/dashboard; **very-high** architectural shifts.
 - If the author over- or under-rated complexity, revise the value. Note the revision (old → new) in the review commit's Summary and give the reason in one line.
-- **Remove any legacy `recommended_models:` YAML** (or per-agent model/effort keys) from frontmatter if present — specs must not embed model IDs; defaults come from `templates/agents/<id>.json` at start time.
+- **Remove any legacy `recommended_models:` YAML** (or per-agent model/effort keys) from frontmatter if present — specs must not embed model IDs; defaults come from the agent's complexity-defaults table at start time.
 - Frontmatter edits ship in the same `spec-review:` commit as other edits.
 
 ## Review workflow
