@@ -40,7 +40,14 @@
       "Bash(pwd)",
       "Bash(which *)",
       "Bash(head *)",
-      "Bash(tail *)"
+      "Bash(tail *)",
+      "Read(/Users/jviner/.aigon/worktrees/brewboard/feature-01-cc-format-date/**)",
+      "Edit(/Users/jviner/.aigon/worktrees/brewboard/feature-01-cc-format-date/**)",
+      "Write(/Users/jviner/.aigon/worktrees/brewboard/feature-01-cc-format-date/**)",
+      "Bash(cd /Users/jviner/.aigon/worktrees/brewboard/feature-01-cc-format-date:*)",
+      "Bash(git -C /Users/jviner/.aigon/worktrees/brewboard/feature-01-cc-format-date:*)",
+      "Bash(node:*)",
+      "Bash(npm:*)"
     ],
     "deny": [
       "Bash(rm -rf /)",
