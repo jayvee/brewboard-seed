@@ -62,6 +62,7 @@
   "devProxy": {
     "basePort": 4200
   },
+  "worktreeSetup": "ln -sfn \"$(dirname \"$(git rev-parse --git-common-dir)\")/node_modules\" node_modules",
   "devServer": {
     "enabled": false
   },

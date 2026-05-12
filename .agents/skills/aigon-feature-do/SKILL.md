@@ -39,26 +39,6 @@ The spec body was printed inline by `feature-do` above. **Use that copy.** Do no
 
 {{PLANNING_CONTEXT_SECTION}}
 
-## Before Step 3: Install dependencies if needed
-
-**Worktrees do not share `node_modules/` with the main repo.** Before running or testing, check if dependencies need to be installed:
-
-```bash
-# Check if node_modules exists
-test -d node_modules && echo "Dependencies installed" || echo "Need to install dependencies"
-```
-
-If missing, install them using the project's package manager:
-```bash
-# Detect and run the appropriate install command
-if [ -f "pnpm-lock.yaml" ]; then pnpm install
-elif [ -f "yarn.lock" ]; then yarn install
-elif [ -f "bun.lockb" ]; then bun install
-elif [ -f "package-lock.json" ]; then npm install
-elif [ -f "package.json" ]; then npm install
-fi
-```
-
 ## Step 3: Implement
 
 Signal that you are starting (shell command only — do not write `.aigon/state/` files directly):
