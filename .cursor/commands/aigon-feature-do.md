@@ -62,17 +62,21 @@ Work through the acceptance criteria in order.
 
 Stage and commit using conventional commits (`feat:`, `fix:`, `chore:`). Verify with `git log --oneline -1`.
 
-## Step 4: Start the dev server
+## Step 4.5: Start the dev server
 
 Run `aigon dev-server start` to start the project dev server. Use the URL printed to verify your changes. **Never run the project's dev command directly** — it bypasses port allocation.
 
 **No implementation log (instructions rigor: light).** Do not create `docs/specs/features/logs/feature-{{ARG1_SYNTAX}}-*-log.md`.
 
-## Step 6.5: Start the dev server
+## Step 6.5: Start the dev server (mandatory)
 
-**You MUST start the dev server before signalling completion.** The evaluator and user need a running preview of your implementation.
+**You MUST run this step — do not skip it, even for simple or non-UI features.**
 
-Start the dev server and leave it running.
+```bash
+aigon dev-server start
+```
+
+Leave it running. Do not proceed to Step 5 until this command has completed successfully.
 
 ## Step 5: Signal completion
 
