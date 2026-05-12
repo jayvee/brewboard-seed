@@ -1,5 +1,7 @@
 ---
 complexity: low
+transitions:
+  - { from: "inbox", to: "backlog", at: "2026-05-12T01:41:41.961Z", actor: "cli/feature-prioritise" }
 ---
 
 # Feature: Social Sharing
