@@ -46,16 +46,16 @@
     },
     "cu": {
       "research": {
-        "model": "composer-1.5"
+        "model": "composer-2"
       },
       "implement": {
-        "model": "composer-1.5"
+        "model": "composer-2"
       },
       "evaluate": {
-        "model": "composer-1.5"
+        "model": "composer-2"
       },
       "review": {
-        "model": "composer-1.5"
+        "model": "composer-2"
       }
     }
   },
