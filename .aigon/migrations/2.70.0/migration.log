@@ -1,0 +1,10 @@
+[2026-07-11T12:48:07.133Z] Starting migration to 2.70.0
+[2026-07-11T12:48:07.133Z] Entities before: features=0, research=0, feedback=4
+[2026-07-11T12:48:07.134Z] Creating backup of .aigon/workflows/
+[2026-07-11T12:48:07.134Z] Backup created successfully
+[2026-07-11T12:48:07.134Z] Running migration function
+[2026-07-11T12:48:07.135Z] migrate_agent_quota_state: merged budget-cache.json + quota.json → agent-quota.json
+[2026-07-11T12:48:07.135Z] Migration function completed
+[2026-07-11T12:48:07.135Z] Validating state files
+[2026-07-11T12:48:07.135Z] Validation passed
+[2026-07-11T12:48:07.136Z] Migration completed successfully

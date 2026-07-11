@@ -1,0 +1,10 @@
+[2026-07-11T12:48:07.144Z] Starting migration to 2.73.0
+[2026-07-11T12:48:07.144Z] Entities before: features=0, research=0, feedback=4
+[2026-07-11T12:48:07.144Z] Creating backup of .aigon/workflows/
+[2026-07-11T12:48:07.144Z] Backup created successfully
+[2026-07-11T12:48:07.144Z] Running migration function
+[2026-07-11T12:48:07.145Z] reproject_spec_review_safe: no repairs needed
+[2026-07-11T12:48:07.145Z] Migration function completed
+[2026-07-11T12:48:07.145Z] Validating state files
+[2026-07-11T12:48:07.145Z] Validation passed
+[2026-07-11T12:48:07.146Z] Migration completed successfully

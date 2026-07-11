@@ -1,0 +1,10 @@
+[2026-07-11T12:48:07.141Z] Starting migration to 2.72.0
+[2026-07-11T12:48:07.141Z] Entities before: features=0, research=0, feedback=4
+[2026-07-11T12:48:07.141Z] Creating backup of .aigon/workflows/
+[2026-07-11T12:48:07.141Z] Backup created successfully
+[2026-07-11T12:48:07.141Z] Running migration function
+[2026-07-11T12:48:07.142Z] restore_pre_271_workflows: restored .aigon/workflows from pre-2.71.0 backup
+[2026-07-11T12:48:07.142Z] Migration function completed
+[2026-07-11T12:48:07.142Z] Validating state files
+[2026-07-11T12:48:07.142Z] Validation passed
+[2026-07-11T12:48:07.143Z] Migration completed successfully

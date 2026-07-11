@@ -1,0 +1,10 @@
+[2026-07-11T12:48:07.147Z] Starting migration to 2.74.0
+[2026-07-11T12:48:07.147Z] Entities before: features=0, research=0, feedback=4
+[2026-07-11T12:48:07.147Z] Creating backup of .aigon/workflows/
+[2026-07-11T12:48:07.147Z] Backup created successfully
+[2026-07-11T12:48:07.147Z] Running migration function
+[2026-07-11T12:48:07.148Z] repair_advisory_close_recovery: no feature workflows
+[2026-07-11T12:48:07.148Z] Migration function completed
+[2026-07-11T12:48:07.148Z] Validating state files
+[2026-07-11T12:48:07.148Z] Validation passed
+[2026-07-11T12:48:07.149Z] Migration completed successfully

@@ -1,0 +1,11 @@
+[2026-07-11T12:48:07.037Z] Starting migration to 2.69.0
+[2026-07-11T12:48:07.039Z] Entities before: features=0, research=0, feedback=4
+[2026-07-11T12:48:07.039Z] Creating backup of .aigon/workflows/
+[2026-07-11T12:48:07.039Z] Backup created successfully
+[2026-07-11T12:48:07.039Z] Running migration function
+[2026-07-11T12:48:07.130Z] migrate_untrack_install_manifest: git rm --cached succeeded.
+[2026-07-11T12:48:07.131Z] migrate_untrack_install_manifest: added local exclude entries: .aigon/install-manifest.json
+[2026-07-11T12:48:07.131Z] Migration function completed
+[2026-07-11T12:48:07.131Z] Validating state files
+[2026-07-11T12:48:07.131Z] Validation passed
+[2026-07-11T12:48:07.132Z] Migration completed successfully
