@@ -22,6 +22,7 @@ All workflow state lives in `./docs/specs/`. Folders are numbered for visual ord
 ```
 docs/specs/
 ├── research-topics/
+│   ├── 00-specs/        # Canonical research specs under stable layout
 │   ├── 01-inbox/        # New research ideas
 │   ├── 02-backlog/      # Prioritised research
 │   ├── 03-in-progress/  # Active research
@@ -29,6 +30,7 @@ docs/specs/
 │   ├── 05-done/         # Completed research
 │   └── 06-paused/       # On hold
 ├── features/
+│   ├── 00-specs/        # Canonical feature specs under stable layout
 │   ├── 01-inbox/        # New feature ideas (feature-description.md)
 │   ├── 02-backlog/      # Prioritised features (feature-NN-description.md)
 │   ├── 03-in-progress/  # Active features
@@ -57,7 +59,7 @@ Research may recommend zero or more features via its `## Output` section. The ol
 | Command | Description |
 |---------|-------------|
 | `aigon feature-create <name>` | Create a new feature spec |
-| `aigon feature-prioritise <name>` | Assign ID and move to backlog |
+| `aigon feature-prioritise <name>` | Assign ID and prioritise to backlog |
 | `aigon feature-spec-review <ID>` | Pre-implementation review of the spec itself |
 | `aigon feature-start <ID> [agents...]` | Setup for solo (no agents) or arena (with agents) |
 | `aigon feature-do <ID> [--iterate]` | Implement feature; `--iterate` runs Autopilot retry loop |
@@ -66,11 +68,12 @@ Research may recommend zero or more features via its `## Output` section. The ol
 | `aigon feature-code-review <ID>` | Post-implementation code review with fixes by a different agent |
 | `aigon feature-cancel-code-review <ID>` | Cancel an in-progress code review, stop the reviewer session, and return the feature to `ready` |
 | `aigon feature-code-revise [ID]` | Implementer-side follow-up after a code review |
+| `aigon feature-escalation <accept\|follow-up\|reopen> <ID> <n>` | Disposition an open review escalation before close (`--reason` required; follow-up needs `--name`) |
 | `aigon feature-autonomous-stop <ID>` | Stop the AutoConductor and take over manually from the current workflow state |
 | `aigon feature-push [ID] [agent]` | Push the feature branch to `origin` for PR review |
 | `aigon feature-close <ID> [agent]` | Merge and complete (specify agent in arena mode) |
 | `aigon feature-cleanup <ID>` | Clean up arena worktrees and branches |
-| `aigon feature-reset <ID>` | Full reset back to backlog (sessions + worktrees + branches + state + spec move) |
+| `aigon feature-reset <ID>` | Full reset back to backlog (sessions + worktrees + branches + state; stable layout refreshes the lifecycle view) |
 
 ## Key Rules
 
@@ -85,7 +88,8 @@ Research may recommend zero or more features via its `## Output` section. The ol
 For features, there are two relevant layers:
 
 - The authoritative lifecycle state lives in `.aigon/workflows/features/{id}/` and is managed by Aigon's workflow engine.
-- The visible stage is still the spec folder under `docs/specs/features/`, but that folder is a projection of workflow state, not the authority.
+- Under the stable spec layout, the canonical spec file lives in `docs/specs/features/00-specs/` for its whole lifetime.
+- The visible stage folders under `docs/specs/features/` are a generated local view of workflow state, not the authority.
 - Active feature discovery should use `{{CMD_PREFIX}}feature-list --active` or workflow snapshot reads, not folder probes.
 
 ## Review Recovery
@@ -101,9 +105,25 @@ Typical recovery flow:
 2. Cancel the bad review.
 3. Re-run `aigon feature-code-review <ID>` with a different reviewer or model.
 
+## Review escalations
+
+When a code reviewer finds an issue beyond a safe in-pass fix, they record it in the implementation log under `## Code Review` using:
+
+`ESCALATE:<category> — <reason>`
+
+Categories include at minimum `architectural`, `security`, `scope`, and `spec-shortfall`. List prefixes and bold markers are tolerated.
+
+On `review-complete`, each marker becomes a `review.escalation_raised` workflow event and appears as `openEscalations[]` on the snapshot. By default these are advisory close findings: `aigon feature-close` records the audit signal and keeps moving. Repos that want strict close gates can set `featureClose.integrityPolicy: "blocking"` or add `review-escalation` to `featureClose.blockingGates`.
+
+- `aigon feature-escalation accept <ID> <n> --reason "…"`
+- `aigon feature-escalation follow-up <ID> <n> --name <slug>` (creates an inbox follow-up spec)
+- `aigon feature-escalation reopen <ID> <n> --reason "…"` (returns to code revision)
+
+Autonomous flows do not auto-accept escalations.
+
 ## Solo Mode Workflow
 
-1. Run `aigon feature-start <ID>` to create branch and move spec to in-progress
+1. Run `aigon feature-start <ID>` to create branch/workflow state and refresh the in-progress view
 2. Run `aigon feature-do <ID>` to begin implementation (add `--iterate` for Autopilot retry loop)
 3. Read the spec path returned by `aigon feature-spec <ID>`
 4. Implement the feature according to the spec
@@ -143,3 +163,49 @@ Before running `feature-close`, always:
    git push -u origin <current-branch-name>
    ```
 2. **Ask the user** if they want to delete the local branch after merge (the CLI will delete it by default)
+
+### Post-merge verification gate
+
+After the feature branch merges into your default branch, `feature-close` can run a **post-merge gate** on merged main before marking the feature done. This catches cross-feature interactions that per-worktree checks miss.
+
+Configure in `.aigon/config.json`:
+
+```json
+{
+  "featureClose": {
+    "postMergeGate": "your-verify-command"
+  }
+}
+```
+
+- **String** — shell command run from the repo root on merged main (e.g. your project's verify script).
+- **Array** — argv form: `["tool", "arg1", "arg2"]`.
+- **`true`** — reuse the deploy command from `commands.deploy` or your package manifest when configured.
+- **`false`** — opt out (close prints a loud skip notice).
+
+By default, when the gate fails, the merge is **not** reverted and close continues. Aigon records an advisory audit event, writes the full gate output in `.aigon/state/close-gates/`, and marks the repo-level main branch condition red until a later passing gate clears it.
+
+Repos that want strict close-integrity behavior can opt in:
+
+```json
+{
+  "featureClose": {
+    "integrityPolicy": "blocking",
+    "postMergeGate": "your-verify-command"
+  }
+}
+```
+
+Or block only selected policy findings:
+
+```json
+{
+  "featureClose": {
+    "blockingGates": ["post-merge-gate"]
+  }
+}
+```
+
+Supported policy gates are `review-escalation`, `preauth-validation`, and `post-merge-gate`. Mechanical failures such as invalid workflow state, missing branches or worktrees, merge conflicts, security scan failures, git failures, and push failures remain hard stops.
+
+The worktree security scan before merge still runs (fail fast before merging). The post-merge gate is the final authority for "done".

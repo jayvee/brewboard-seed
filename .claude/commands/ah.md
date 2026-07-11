@@ -9,7 +9,7 @@ description: Show Aigon commands (shortcut for help)
 |---------|-------------|
 | `/aigon:feature-create <name>` | Create a new feature spec |
 | `/aigon:feature-now <name>` | Fast-track: inbox → prioritise → setup → implement, or create new + implement |
-| `/aigon:feature-prioritise <name>` | Assign ID and move to backlog |
+| `/aigon:feature-prioritise <name>` | Assign ID and prioritise to backlog |
 | `/aigon:feature-start <ID> [agents...]` | Setup for Drive (branch) or Fleet (worktrees) |
 | `/aigon:feature-do <ID> [--iterate]` | Do feature work; `--iterate` enables the Autopilot retry loop |
 | `/aigon:feature-spec <ID> [--json]` | Resolve the canonical visible spec path for a feature |
@@ -43,7 +43,7 @@ description: Show Aigon commands (shortcut for help)
 
 | Command | Description |
 |---------|-------------|
-| `/aigon:feedback-create <title>` | Create feedback item in inbox with next ID |
+| `/aigon:feedback-create <title>` | Legacy no-op; capture as research with `origin: customer-feedback` |
 | `/aigon:feedback-list [filters]` | List feedback items with status/type/severity/tag filters |
 | `/aigon:feedback-triage <ID>` | Run triage preview and apply with explicit confirmation |
 
@@ -58,12 +58,12 @@ description: Show Aigon commands (shortcut for help)
 | Code | Agent | Command | Mode |
 |------|-------|---------|------|
 | cc | Claude Code | `claude --permission-mode acceptEdits` | Auto-edits, prompts for risky Bash |
-| gg | Gemini | `gemini --yolo` | Auto-approves all |
 | cx | Codex | `codex` | Workspace-write, smart approval |
 | cu | Cursor | `agent --force` | Auto-approves commands (yolo mode) |
 | op | OpenCode | `opencode` | Workspace-write, smart approval |
 | km | Kimi Code CLI | `kimi --yolo` | Auto-approves all |
 | am | Amp | `amp --no-ide --no-jetbrains --no-notifications --dangerously-allow-all` | --no-ide --no-jetbrains --no-notifications --dangerously-allow-all |
+| ag | Antigravity CLI | `agy --dangerously-skip-permissions` | --dangerously-skip-permissions |
 
 **Quick-allow when prompted:** Claude `Shift+Tab` • Gemini `2` for always • Cursor "Add to allowlist" • Codex "Allow and remember"
 

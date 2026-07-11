@@ -7,7 +7,7 @@ description: Start research <ID> [agents...] - create workspace and begin resear
 
 Prepare your workspace to conduct research in either Drive or Fleet mode.
 
-**CRITICAL:** You MUST use the CLI command below to perform setup. Do NOT manually move topic files or create worktrees — the CLI handles committing the spec move before worktree setup, which is essential for parallel modes.
+**CRITICAL:** You MUST use the CLI command below to perform setup. Do NOT manually move topic files, lifecycle-view links, or create worktrees — the CLI records the workflow transition and prepares worktree state.
 
 ## Usage
 
@@ -39,7 +39,7 @@ The mode is determined automatically based on what the user provides:
 - **2+ agents**: Fleet mode - create parallel research worktrees/findings contexts
 
 The CLI will:
-- Move the topic from `02-backlog` to `03-in-progress`
+- Transition the topic from backlog to in-progress and refresh the generated lifecycle view
 - **Commit the topic move** before any worktree setup
 - Create findings files for agents when needed
 - Create worktree/session context for parallel research
@@ -53,13 +53,13 @@ Research now follows the same lifecycle shape as features: `start -> do -> submi
 After the CLI completes, run:
 
 ```bash
-aigon-research-do <ID>
+$aigon-research-do <ID>
 ```
 
 When the research pass is complete, signal completion with `aigon agent-status research-complete`, then close with:
 
 ```bash
-aigon-research-close <ID>
+$aigon-research-close <ID>
 ```
 
 ### Drive Worktree Mode
@@ -67,13 +67,13 @@ aigon-research-close <ID>
 After the CLI completes, the research agent session is ready in the worktree context. Run:
 
 ```bash
-aigon-research-do <ID>
+$aigon-research-do <ID>
 ```
 
 When the research pass is complete, signal completion with `aigon agent-status research-complete`, then close from the main repo:
 
 ```bash
-aigon-research-close <ID>
+$aigon-research-close <ID>
 ```
 
 ### Fleet Mode
@@ -81,13 +81,13 @@ aigon-research-close <ID>
 After the CLI completes, all agents conduct research in parallel and submit their findings. When all agents finish:
 
 ```bash
-aigon-research-eval <ID>
+$aigon-research-eval <ID>
 ```
 
 Then finish with:
 
 ```bash
-aigon-research-close <ID>
+$aigon-research-close <ID>
 ```
 
 ### Re-opening a crashed or ended Fleet session
@@ -95,7 +95,7 @@ aigon-research-close <ID>
 If research sessions need to be reopened or attached after setup, use:
 
 ```bash
-aigon-research-open <ID>
+$aigon-research-open <ID>
 ```
 
 ## Important Notes
@@ -109,8 +109,8 @@ aigon-research-open <ID>
 
 End your response with the suggested next command on its own line. This helps agent UIs surface the next suggested Aigon command. Use the actual ID and choose based on mode:
 
-- **Drive mode:** `aigon-research-do <ID>`
-- **Drive worktree:** `aigon-research-do <ID>`
-- **Fleet:** `aigon-research-eval <ID>`
+- **Drive mode:** `$aigon-research-do <ID>`
+- **Drive worktree:** `$aigon-research-do <ID>`
+- **Fleet:** `$aigon-research-eval <ID>`
 
 ARGUMENTS: $ARGUMENTS
