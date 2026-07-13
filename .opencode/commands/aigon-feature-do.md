@@ -60,8 +60,6 @@ aigon agent-status implementing
 - Do not move spec files between folders — only the CLI manages spec state transitions.
 - If you must touch a file outside your feature's area, note it explicitly in your implementation log with the reason.
 
-Work through the acceptance criteria in order.
-
 ## Step 4: Commit your implementation
 
 Stage and commit using conventional commits (`feat:`, `fix:`, `chore:`). Verify with `git log --oneline -1`.
