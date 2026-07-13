@@ -5,17 +5,17 @@ description: Open feature worktree in terminal and start agent
 
 # feature-open
 
-Open a feature worktree in terminal and automatically start the AI agent with `$aigon-feature-do`.
+Open a feature worktree in terminal and automatically start the AI agent with `aigon-feature-do`.
 
 ## Usage
 
 ```
-$aigon-feature-open [feature-id] [agent-code]
+aigon-feature-open [feature-id] [agent-code]
 ```
 
-- `$aigon-feature-open` — open the most recently created worktree
-- `$aigon-feature-open 77` — open any worktree for feature 77
-- `$aigon-feature-open 77 cx` — open specifically the cx (Codex) worktree for feature 77
+- `aigon-feature-open` — open the most recently created worktree
+- `aigon-feature-open 77` — open any worktree for feature 77
+- `aigon-feature-open 77 cx` — open specifically the cx (Codex) worktree for feature 77
 
 ## Agent Mappings
 
@@ -48,7 +48,7 @@ This will:
 1. Find the matching worktree
 2. Create a Warp launch configuration
 3. Open Warp with the worktree directory
-4. Auto-run the agent CLI with `$aigon-feature-do <ID>`
+4. Auto-run the agent CLI with `aigon-feature-do <ID>`
 
 ## Step 2: Confirm to user
 

@@ -36,16 +36,16 @@ If the CLI reports errors while recording or publishing the workflow transition,
 
 `feature-start` creates the workspace AND opens agent terminals automatically — there is no separate "open" step.
 
-- **Drive mode (branch):** you end up on the feature branch in your current terminal. Start implementation manually with `$aigon-feature-do <ID>`. Close with `$aigon-feature-close <ID>` when done.
-- **Drive worktree:** agent terminal is already running. Wait for submit, then `$aigon-feature-close <ID>` from the main repo.
-- **Fleet:** all agent terminals are running and implementing. Wait for all to submit, then `$aigon-feature-eval <ID>`.
-- **Re-open a crashed session:** `$aigon-feature-open <ID>` (or `$aigon-feature-open <ID> <agent>` for a specific Fleet agent).
+- **Drive mode (branch):** you end up on the feature branch in your current terminal. Start implementation manually with `aigon-feature-do <ID>`. Close with `aigon-feature-close <ID>` when done.
+- **Drive worktree:** agent terminal is already running. Wait for submit, then `aigon-feature-close <ID>` from the main repo.
+- **Fleet:** all agent terminals are running and implementing. Wait for all to submit, then `aigon-feature-eval <ID>`.
+- **Re-open a crashed session:** `aigon-feature-open <ID>` (or `aigon-feature-open <ID> <agent>` for a specific Fleet agent).
 
 Worktrees are created in `../<repo>-worktrees/` to keep them grouped with the project.
 
 ## Prompt Suggestion
 
 End your response with the next command on its own line:
-- **Drive (branch, solo):** `$aigon-feature-do <ID>`
-- **Drive worktree:** `$aigon-feature-close <ID>` (agent is already running in its terminal)
-- **Fleet:** `$aigon-feature-eval <ID>`
+- **Drive (branch, solo):** `aigon-feature-do <ID>`
+- **Drive worktree:** `aigon-feature-close <ID>` (agent is already running in its terminal)
+- **Fleet:** `aigon-feature-eval <ID>`

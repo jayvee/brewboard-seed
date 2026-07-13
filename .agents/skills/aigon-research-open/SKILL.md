@@ -10,10 +10,10 @@ Open all Fleet research agents side-by-side in Warp terminal, each pre-loaded wi
 ## Usage
 
 ```bash
-$aigon-research-open <research-id>
+aigon-research-open <research-id>
 ```
 
-- `$aigon-research-open 05` — opens all Fleet agents side-by-side for research 05
+- `aigon-research-open 05` — opens all Fleet agents side-by-side for research 05
 
 ## When to Use
 
@@ -27,7 +27,7 @@ This command is for **Fleet mode research only**. It opens multiple terminal pan
 
 1. Detects which agents are set up by scanning findings files
 2. Opens Warp terminal with horizontal split panes (one per agent)
-3. Each pane is pre-loaded with the agent CLI and `$aigon-research-do <ID>` command
+3. Each pane is pre-loaded with the agent CLI and `aigon-research-do <ID>` command
 4. All panes use the main repository directory (not separate worktrees)
 
 ## Example

@@ -46,10 +46,10 @@ The template ships with a `complexity:` frontmatter field that feeds the dashboa
 
 Set `complexity:` in the frontmatter; do not write model or effort values into the spec — defaults are resolved at start time from each agent’s `cli.complexityDefaults[<complexity>]`.
 
-Next step: Once the topic is complete, run `$aigon-research-prioritise $ARGUMENTS` to assign an ID and prioritise it to backlog.
+Next step: Once the topic is complete, run `aigon-research-prioritise $ARGUMENTS` to assign an ID and prioritise it to backlog.
 
 ## Prompt Suggestion
 
 End your response with the suggested next command on its own line. This helps agent UIs surface the next suggested Aigon command. Use the actual topic name:
 
-`$aigon-research-prioritise <name>`
+`aigon-research-prioritise <name>`

@@ -64,7 +64,7 @@ If the branch is `main` (or `master`), skip to **Path D: Main branch**.
 > You are on Drive branch `<branch>` with no uncommitted changes and no implementation yet.
 >
 > **Suggested next step:**
-> `$aigon-feature-do <ID>`
+> `aigon-feature-do <ID>`
 >
 > This opens the feature spec and starts the implementation session.
 
@@ -75,7 +75,7 @@ If the branch is `main` (or `master`), skip to **Path D: Main branch**.
 > **Suggested next steps:**
 >
 > 1. `aigon agent-status implementation-complete` — mark implementation complete and signal ready for review
-> 2. `$aigon-feature-do <ID>` — continue implementing if not yet done
+> 2. `aigon-feature-do <ID>` — continue implementing if not yet done
 
 #### B3: Worktree branch (agent code present), any state
 
@@ -96,7 +96,7 @@ If the branch is `main` (or `master`), skip to **Path D: Main branch**.
 > You are on research branch `<branch>`.
 >
 > **Suggested next step:**
-> `$aigon-research-do <ID>`
+> `aigon-research-do <ID>`
 >
 > This will guide you through writing your research findings.
 
@@ -105,8 +105,8 @@ If the branch is `main` (or `master`), skip to **Path D: Main branch**.
 >
 > **Suggested next steps:**
 >
-> 1. `$aigon-research-close <ID>` — if research is complete
-> 2. `$aigon-research-do <ID>` — to continue or update findings
+> 1. `aigon-research-close <ID>` — if research is complete
+> 2. `aigon-research-do <ID>` — to continue or update findings
 
 ---
 
@@ -124,7 +124,7 @@ Count the worktrees for each in-progress feature (from board output — look for
 > Feature `#<ID> <name>` is in progress (Fleet mode).
 >
 > **Suggested next step:**
-> `$aigon-feature-eval <ID>`
+> `aigon-feature-eval <ID>`
 >
 > This will compare all agent implementations and select the best one.
 
@@ -136,7 +136,7 @@ Look at the board output for agent status. If the agent shows `complete` or `don
 > Feature `#<ID> <name>` is in progress (Drive mode).
 >
 > **Suggested next step:**
-> `$aigon-feature-do <ID>`
+> `aigon-feature-do <ID>`
 >
 > This starts the implementation session on the Drive branch.
 
@@ -144,7 +144,7 @@ Look at the board output for agent status. If the agent shows `complete` or `don
 > Feature `#<ID> <name>` is implemented and complete.
 >
 > **Suggested next step:**
-> `$aigon-feature-close <ID>`
+> `aigon-feature-close <ID>`
 >
 > This will merge your implementation.
 
@@ -153,9 +153,9 @@ Look at the board output for agent status. If the agent shows `complete` or `don
 > Research `#<ID> <name>` is in progress.
 >
 > **Suggested next step:**
-> `$aigon-research-close <ID>`
+> `aigon-research-close <ID>`
 >
-> Or to continue conducting: `$aigon-research-do <ID>`
+> Or to continue conducting: `aigon-research-do <ID>`
 
 #### D3: Nothing active — backlog or inbox items available
 
@@ -165,8 +165,8 @@ Show the board summary and suggest starting something new:
 >
 > **Suggested next steps:**
 >
-> 1. `$aigon-feature-now <name>` — fast-track a new or inbox feature
-> 2. `$aigon-board` — view the full Kanban board to pick what to work on next
+> 1. `aigon-feature-now <name>` — fast-track a new or inbox feature
+> 2. `aigon-board` — view the full Kanban board to pick what to work on next
 
 ---
 
@@ -180,7 +180,7 @@ Fall back to showing the board and suggesting the user pick:
 > **Showing board instead:**
 
 Run `aigon board` and display the output. Then suggest:
-> Run `$aigon-board` for details, or `$aigon-feature-now <name>` to start something new.
+> Run `aigon-board` for details, or `aigon-feature-now <name>` to start something new.
 
 ---
 

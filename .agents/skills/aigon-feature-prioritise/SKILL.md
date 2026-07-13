@@ -28,24 +28,24 @@ Choose your mode:
 
 **Drive (branch)** — work in the current repo:
 ```
-$aigon-feature-start <ID>
+aigon-feature-start <ID>
 ```
 
 **Drive (worktree)** — isolated worktree for parallel development:
 ```
-$aigon-feature-start <ID> <agent>
+aigon-feature-start <ID> <agent>
 ```
 
 **Fleet** — multiple agents compete on the same feature:
 ```
-$aigon-feature-start <ID> <agent1> <agent2> [agent3...]
+aigon-feature-start <ID> <agent1> <agent2> [agent3...]
 ```
 
-Example Drive worktree: `$aigon-feature-start 55 cc`
-Example Fleet: `$aigon-feature-start 55 cc gg cx cu`
+Example Drive worktree: `aigon-feature-start 55 cc`
+Example Fleet: `aigon-feature-start 55 cc gg cx cu`
 
 ## Prompt Suggestion
 
 End your response with the suggested next command on its own line. This helps agent UIs surface the next suggested Aigon command. Use the actual ID assigned by the CLI:
 
-`$aigon-feature-start <ID>`
+`aigon-feature-start <ID>`

@@ -25,7 +25,7 @@ If no ID is provided or it doesn't match an active feature, run `aigon feature-l
 aigon feature-do $1
 ```
 
-Only run `$aigon-feature-start $1` if the feature branch/worktree does not exist yet.
+Only run `aigon-feature-start $1` if the feature branch/worktree does not exist yet.
 
 ## Step 2: Read the spec (already inlined)
 
@@ -100,4 +100,4 @@ After it succeeds, tell the user: "Implementation complete — ready for review.
 
 **STAY in the session.** If the user requests changes, make them, commit, and say "Changes committed."
 
-Do **not** run `feature-close` or `feature-eval` — that's the user's decision. In Drive mode the recommended next command is `$aigon-feature-close <ID>`; in worktree/Fleet modes, wait for the user.
+Do **not** run `feature-close` or `feature-eval` — that's the user's decision. In Drive mode the recommended next command is `aigon-feature-close <ID>`; in worktree/Fleet modes, wait for the user.

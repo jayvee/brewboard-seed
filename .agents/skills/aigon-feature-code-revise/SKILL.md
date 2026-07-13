@@ -20,7 +20,7 @@ echo "Branch: $BRANCH"
 
 Expected branch shape: `feature-<slug>-<agent>` (e.g. `feature-check-review-skill-command-cc`).
 
-Parse the `<slug>` out of the branch name (strip the `feature-` prefix and the trailing `-<agent>` suffix where agent is one of `cc, cx, cu, op, km, am, ag`). Then resolve the slug to a feature ID by matching against `aigon feature-list --active`:
+Parse the `<slug>` out of the branch name (strip the `feature-` prefix and the trailing `-<agent>` suffix where agent is one of `cc, cx, cu, op, km, am`). Then resolve the slug to a feature ID by matching against `aigon feature-list --active`:
 
 ```bash
 aigon feature-list --active
@@ -30,7 +30,7 @@ Find the row whose name matches the slug and read its ID.
 
 **If the branch is `main`** or doesn't match the `feature-<slug>-<agent>` pattern: STOP. Print this one-liner and do nothing else:
 
-> Can't infer feature ID — run this inside the feature worktree, or pass an explicit ID (e.g. `$aigon-feature-code-revise 230`).
+> Can't infer feature ID — run this inside the feature worktree, or pass an explicit ID (e.g. `aigon-feature-code-revise 230`).
 
 Do **not** guess. Do **not** prompt the user to pick from a list — that's noise. Just stop.
 
@@ -119,4 +119,4 @@ After reporting your decision, signal that you have addressed the review feedbac
 aigon agent-status revision-complete
 ```
 
-This tells the AutoConductor that you are done processing the review. **Do NOT run `$aigon-feature-close`.** The user (or AutoConductor) decides when to close the feature.
+This tells the AutoConductor that you are done processing the review. **Do NOT run `aigon-feature-close`.** The user (or AutoConductor) decides when to close the feature.

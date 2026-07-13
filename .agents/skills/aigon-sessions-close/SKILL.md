@@ -10,11 +10,11 @@ Kill all running agent processes for a given feature or research ID, and close t
 ## Usage
 
 ```bash
-$aigon-sessions-close <ID>
+aigon-sessions-close <ID>
 ```
 
-- `$aigon-sessions-close 05` — close all agent sessions for research/feature #05
-- `$aigon-sessions-close 55` — close all agent sessions for feature #55
+- `aigon-sessions-close 05` — close all agent sessions for research/feature #05
+- `aigon-sessions-close 55` — close all agent sessions for feature #55
 
 ## When to Use
 

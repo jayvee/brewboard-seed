@@ -67,10 +67,10 @@ git add docs/specs/features/01-inbox/
 git commit -m "feat: create feature spec - <name>"
 ```
 
-Next step: Once the spec is committed, suggest `$aigon-feature-prioritise $ARGUMENTS` to assign an ID and prioritise it to backlog.
+Next step: Once the spec is committed, suggest `aigon-feature-prioritise $ARGUMENTS` to assign an ID and prioritise it to backlog.
 
 ## Prompt Suggestion
 
 End your response with the suggested next command on its own line. This helps agent UIs surface the next suggested Aigon command. Use the actual feature name:
 
-`$aigon-feature-prioritise <name>`
+`aigon-feature-prioritise <name>`

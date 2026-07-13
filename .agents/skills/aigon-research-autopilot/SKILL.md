@@ -71,6 +71,6 @@ Each spawned agent will:
 
 After all agents submit, suggest the eval command:
 
-`$aigon-research-eval $ARGUMENTS`
+`aigon-research-eval $ARGUMENTS`
 
 ARGUMENTS: $ARGUMENTS

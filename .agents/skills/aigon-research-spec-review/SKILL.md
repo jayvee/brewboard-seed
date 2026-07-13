@@ -137,4 +137,4 @@ Tell the user what you changed and why.
 
 Then, as the last line of your reply, print the following **as a literal suggestion for the user to run next** — do not execute it yourself:
 
-`$aigon-research-spec-revise $1`
+`aigon-research-spec-revise $1`

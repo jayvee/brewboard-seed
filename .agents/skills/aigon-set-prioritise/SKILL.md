@@ -27,17 +27,17 @@ This assigns sequential feature ids and prioritises each member to backlog in an
 After prioritisation, start work on the first backlog member (or the whole set in Pro):
 
 ```
-$aigon-feature-start <ID> <agent>
+aigon-feature-start <ID> <agent>
 ```
 
 For set-level autonomous execution (Pro):
 
 ```
-$aigon-set-autonomous-start <slug> <agents...>
+aigon-set-autonomous-start <slug> <agents...>
 ```
 
 ## Prompt Suggestion
 
 End with the suggested next command, using a real id from the CLI output:
 
-`$aigon-feature-start <ID>`
+`aigon-feature-start <ID>`

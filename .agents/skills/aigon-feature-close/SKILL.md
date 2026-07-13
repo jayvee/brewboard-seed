@@ -140,7 +140,7 @@ Skipped:
 After all adoption commits are verified, clean up the adopted agents' worktrees:
 
 ```
-$aigon-feature-cleanup $1
+aigon-feature-cleanup $1
 ```
 
 ### Cleanup after Fleet
@@ -148,8 +148,8 @@ $aigon-feature-cleanup $1
 After merging the winner (and completing adoption if applicable), clean up remaining worktrees:
 
 ```
-$aigon-feature-cleanup $1         # Delete locally
-$aigon-feature-cleanup $1 --push  # Push to remote first
+aigon-feature-cleanup $1         # Delete locally
+aigon-feature-cleanup $1 --push  # Push to remote first
 ```
 
 Use `--push` if you want to preserve the alternative implementations on the remote repository.
@@ -190,16 +190,16 @@ If no docs need updating, skip this step.
 After the command completes, check the pipeline and suggest the most useful next step:
 
 1. If `--adopt` was used, the adoption should already be complete (Phase 2–6 above). If there are remaining non-adopted worktrees, suggest cleanup:
-   `$aigon-feature-cleanup <ID>`
+   `aigon-feature-cleanup <ID>`
 
 2. If the feature used **Fleet mode** (without `--adopt`) and has remaining worktrees, suggest cleanup:
-   `$aigon-feature-cleanup <ID>`
+   `aigon-feature-cleanup <ID>`
 
 3. Otherwise, check the pipeline:
    - List files in `./docs/specs/features/02-backlog/` matching `feature-*.md`
-   - If features exist in **backlog**: suggest setting up the next one — `$aigon-feature-start <next-ID>`
+   - If features exist in **backlog**: suggest setting up the next one — `aigon-feature-start <next-ID>`
    - If backlog is empty, list files in `./docs/specs/features/01-inbox/` matching `feature-*.md`
-   - If features exist in **inbox**: suggest prioritising — `$aigon-feature-prioritise`
+   - If features exist in **inbox**: suggest prioritising — `aigon-feature-prioritise`
    - If both are empty: let the user know the pipeline is clear
 
 ## Prompt Suggestion

@@ -20,10 +20,10 @@ If no name is provided, or the name doesn't match an existing topic in the inbox
 
 This assigns or confirms the research ID, records backlog lifecycle state, and refreshes the generated view.
 
-Next step: Run `$aigon-research-start <ID>` (Drive) or `$aigon-research-start <ID> cc gg` (Fleet) to begin.
+Next step: Run `aigon-research-start <ID>` (Drive) or `aigon-research-start <ID> cc gg` (Fleet) to begin.
 
 ## Prompt Suggestion
 
 End your response with the suggested next command on its own line. This helps agent UIs surface the next suggested Aigon command. Use the actual ID assigned by the CLI:
 
-`$aigon-research-start <ID>`
+`aigon-research-start <ID>`
