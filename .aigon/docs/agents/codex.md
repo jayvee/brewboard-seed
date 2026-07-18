@@ -4,7 +4,7 @@
 ## Agent Identity
 - **Agent ID**: `cx`
 - **Worktree Pattern**: `../feature-NN-cx-description`
-- **Implementation Log**: Mode-conditional — Fleet requires a short log under `./docs/specs/features/logs/`; solo Drive (branch) skips it by default; solo Drive worktree uses a one-line log when a starter file exists. Override with `"logging_level": "fleet-only" | "always" | "never"` in `.aigon/config.json` (see `.aigon/docs/development_workflow.md`).
+- **Implementation Log**: Default-required in all modes — solo Drive branch and worktree need at least a one-line log under `./docs/specs/features/logs/`; Fleet needs a short structured log. Opt out only with `"logging_level": "never"` in `.aigon/config.json` (see `.aigon/docs/development_workflow.md`).
 
 ## Commands
 
@@ -63,15 +63,15 @@ These are direct lifecycle commands you run yourself in the agent host — slash
 
 > **CRITICAL — Codex dev server rules:**
 >
-> **NEVER run `npm run dev`, `next dev`, or any dev command directly.** Running dev commands directly bypasses port allocation and will cause port conflicts.
+> **NEVER run the project's configured dev command directly.** Running dev commands directly bypasses port allocation and will cause port conflicts.
 >
-> The PORT is already set in `.env.local` by the worktree setup. If you must start a dev server, use `aigon dev-server start`.
+> Always use `aigon dev-server start` for port allocation and proxy registration.
 >
 > Because Codex kills background processes when shell commands exit, use `--register-only` mode:
 >
-> 1. Run `aigon dev-server start --register-only` — allocates your agent's port and writes it to `.env.local`
-> 2. Read the allocated port: `grep ^PORT= .env.local`
-> 3. Start the server in a **persistent terminal session** using `/terminal`: `PORT=<the-port> npm run dev`
+> 1. Run `aigon dev-server start --register-only` — allocates your agent's port and writes it to the project's port configuration
+> 2. Read the allocated port from the project's port configuration (see worktree setup output)
+> 3. Start the server in a **persistent terminal session** using `/terminal` with the allocated port and the project's configured dev command
 > 4. Get your app URL: `aigon dev-server url`
 > 5. Use that URL for all testing
 

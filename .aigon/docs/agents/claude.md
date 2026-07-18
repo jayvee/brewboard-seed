@@ -4,7 +4,7 @@
 ## Agent Identity
 - **Agent ID**: `cc`
 - **Worktree Pattern**: `../feature-NN-cc-description`
-- **Implementation Log**: Mode-conditional — Fleet requires a short log under `./docs/specs/features/logs/`; solo Drive (branch) skips it by default; solo Drive worktree uses a one-line log when a starter file exists. Override with `"logging_level": "fleet-only" | "always" | "never"` in `.aigon/config.json` (see `.aigon/docs/development_workflow.md`).
+- **Implementation Log**: Default-required in all modes — solo Drive branch and worktree need at least a one-line log under `./docs/specs/features/logs/`; Fleet needs a short structured log. Opt out only with `"logging_level": "never"` in `.aigon/config.json` (see `.aigon/docs/development_workflow.md`).
 
 ## Commands
 
@@ -104,8 +104,8 @@ When the user says "save that permission", "remember that", or asks you to persi
 4. Confirm what you saved
 
 Use the narrowest pattern that covers the user's intent:
-- Specific: `Bash(npm test)`, `Bash(git push:*)`
-- Broad: `Bash(npm:*)`, `Bash(node:*)`
+- Specific: `Bash(git status)`, `Bash(git push:*)`
+- Broad: `Bash(git:*)`, `Bash(python:*)`
 
 Prefer specific patterns — broad Bash allows can be chained to bypass deny rules. Ask the user if unsure whether to save narrowly or broadly.
 

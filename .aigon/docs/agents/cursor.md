@@ -4,7 +4,7 @@
 ## Agent Identity
 - **Agent ID**: `cu`
 - **Worktree Pattern**: `../feature-NN-cu-description`
-- **Implementation Log**: Mode-conditional — Fleet requires a short log under `./docs/specs/features/logs/`; solo Drive (branch) skips it by default; solo Drive worktree uses a one-line log when a starter file exists. Override with `"logging_level": "fleet-only" | "always" | "never"` in `.aigon/config.json` (see `.aigon/docs/development_workflow.md`).
+- **Implementation Log**: Default-required in all modes — solo Drive branch and worktree need at least a one-line log under `./docs/specs/features/logs/`; Fleet needs a short structured log. Opt out only with `"logging_level": "never"` in `.aigon/config.json` (see `.aigon/docs/development_workflow.md`).
 
 ## Commands
 
@@ -63,9 +63,9 @@ These are direct lifecycle commands you run yourself in the agent host — slash
 
 > **CRITICAL — Cursor dev server rules:**
 >
-> **NEVER run `npm run dev`, `next dev`, or any dev command directly.** Running dev commands directly bypasses port allocation and will cause port conflicts.
+> **NEVER run the project's configured dev command directly.** Running dev commands directly bypasses port allocation and will cause port conflicts.
 >
-> Always use `aigon dev-server start` which allocates a unique port and registers with the proxy.
+> Always use `aigon dev-server start`, which allocates a unique port and registers with the proxy.
 > Check your URL with `aigon dev-server url`.
 
 ## Critical Rules
